@@ -1,0 +1,1125 @@
+<title>Philippinen 2027</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: a sunset hero over the sea, then one calm reading column of sections; tools (map, plan, lists) sit in quiet surfaces on a pale lagoon ground. */
+:root{
+  --bg:#EFF6F5; --surface:#FFFFFF; --surface-2:#E3EFEE; --line:#CADDDB; --line-soft:#DDEAE8;
+  --ink:#0F2A2E; --ink-soft:#48646A; --ink-faint:#7B9397;
+  --sea:#0B6E79; --sea-soft:#D2EAEA; --on-sea:#FFFFFF;
+  --coral:#D94E36; --coral-soft:#FBE0D8;
+  --mango:#C98A0F; --mango-soft:#FBEFCF;
+  --palm:#2F7D4F; --palm-soft:#DAEEDF;
+  --display:"Gloock","Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --sans:"Figtree",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,Roboto,Arial,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,"Cascadia Mono",Consolas,Menlo,monospace;
+  --shadow:0 1px 2px rgba(15,42,46,.06),0 10px 30px -14px rgba(15,42,46,.22);
+  --r:16px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#09191D; --surface:#0F262B; --surface-2:#143137; --line:#21444B; --line-soft:#1A3A40;
+  --ink:#E1EFED; --ink-soft:#A2BCBE; --ink-faint:#6D898C;
+  --sea:#4CC2C7; --sea-soft:#113D43; --on-sea:#05262A;
+  --coral:#FF7C62; --coral-soft:#3C231F;
+  --mango:#F2BE4F; --mango-soft:#372D13;
+  --palm:#6CC48C; --palm-soft:#15352A;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 12px 30px -14px rgba(0,0,0,.6);
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#09191D; --surface:#0F262B; --surface-2:#143137; --line:#21444B; --line-soft:#1A3A40;
+  --ink:#E1EFED; --ink-soft:#A2BCBE; --ink-faint:#6D898C;
+  --sea:#4CC2C7; --sea-soft:#113D43; --on-sea:#05262A;
+  --coral:#FF7C62; --coral-soft:#3C231F;
+  --mango:#F2BE4F; --mango-soft:#372D13;
+  --palm:#6CC48C; --palm-soft:#15352A;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 12px 30px -14px rgba(0,0,0,.6);
+  color-scheme:dark}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--display);font-weight:400;line-height:1.15;margin:0;text-wrap:balance}
+p{margin:0}
+a{color:var(--sea)}
+button{font-family:inherit;cursor:pointer}
+input,select,textarea{font-family:inherit;font-size:1rem;color:var(--ink);background:var(--surface);accent-color:var(--sea)}
+:focus-visible{outline:2px solid var(--mango);outline-offset:2px;border-radius:4px}
+.num{font-variant-numeric:tabular-nums}
+.mono{font-family:var(--mono)}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+/* NAV */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(6,30,36,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,240,225,.08)}
+.nav .wrap{height:56px;display:flex;align-items:center;gap:16px}
+.brand{font-family:var(--display);color:#FFF3E6;text-decoration:none;font-size:1.2rem;white-space:nowrap}
+.brand b{font-weight:400;color:#F6B95C}
+.nav-links{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;flex:1;min-width:0}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-links a{color:#A9C3C4;text-decoration:none;font-size:.85rem;padding:6px 10px;border-radius:8px;white-space:nowrap}
+.nav-links a:hover,.nav-links a.on{color:#FFF3E6;background:rgba(255,240,225,.1)}
+.clock{flex-shrink:0;display:flex;align-items:center;gap:7px;font-size:.78rem;color:#A9C3C4;border:1px solid rgba(255,240,225,.14);padding:4px 10px;border-radius:99px}
+.clock b{font-family:var(--mono);color:#F6B95C;font-weight:600}
+.clock i{width:6px;height:6px;border-radius:50%;background:#F07A55;box-shadow:0 0 6px #F07A55}
+@media (max-width:640px){.clock .lbl{display:none}}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;color:#FFF3E6;background:linear-gradient(180deg,#071E27 0%,#0E3442 30%,#3A4C63 52%,#B5604E 70%,#F2A35C 80%,#0C3440 80.2%,#082730 100%)}
+#glint{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero-scene{position:absolute;left:0;right:0;bottom:0;width:100%;height:auto;pointer-events:none;display:block}
+.hero-inner{position:relative;z-index:2;padding-block:88px 220px}
+.kicker{font-family:var(--mono);font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:#F6B95C;margin-bottom:16px}
+.kicker span{color:#6E9396;margin:0 6px}
+.hero h1{font-size:clamp(2.9rem,9vw,6rem);letter-spacing:-.01em;line-height:1}
+.hero h1 em{font-style:italic;color:#F6B95C}
+.hero-sub{margin-top:18px;font-size:clamp(1rem,2.2vw,1.2rem);color:#C9D9D8;max-width:36em}
+.hero-sub b{color:#FFF3E6;font-weight:600}
+.islands{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.islands span{font-size:.85rem;padding:5px 12px;border-radius:99px;background:rgba(255,243,230,.08);border:1px solid rgba(255,243,230,.18)}
+.islands b{color:#F6B95C;font-weight:600;font-family:var(--mono);font-size:.78rem;margin-right:6px}
+.countdown{display:flex;gap:10px;margin-top:34px;flex-wrap:wrap}
+.cd{background:rgba(255,243,230,.07);border:1px solid rgba(255,243,230,.16);border-radius:14px;padding:14px 8px 10px;min-width:84px;text-align:center}
+.cd b{display:block;font-family:var(--display);font-weight:400;font-size:clamp(1.9rem,5vw,2.8rem);line-height:1;font-variant-numeric:tabular-nums}
+.cd small{display:block;margin-top:6px;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:#8FB0B1}
+.phase{margin-top:18px;color:#F6B95C;font-size:.98rem}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:6px;border:0;border-radius:99px;padding:10px 18px;font-size:.92rem;font-weight:600;text-decoration:none;background:var(--sea);color:var(--on-sea)}
+.btn:hover{filter:brightness(1.07)}
+.btn-hero{background:#F6B95C;color:#1B1407}
+.btn-ghost{background:transparent;color:#FFF3E6;border:1px solid rgba(255,243,230,.35)}
+.btn-line{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn-sm{padding:7px 13px;font-size:.84rem}
+
+/* FACT */
+.fact{margin-top:-46px;position:relative;z-index:3}
+.fact-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:18px 22px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.fact-card .mark{font-family:var(--display);font-size:2.2rem;color:var(--coral);line-height:1}
+.fact-card div{flex:1;min-width:220px}
+.fact-card h3{font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:4px}
+.fact-card button{background:transparent;border:1px solid var(--line);color:var(--ink);border-radius:99px;padding:7px 14px;font-size:.84rem}
+
+/* SECTIONS */
+.sec{padding-block:72px 8px}
+.eyebrow{font-family:var(--mono);font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--coral);margin-bottom:10px}
+.eyebrow i{font-style:normal;color:var(--ink-faint);margin-right:8px;letter-spacing:.05em;text-transform:none;font-family:var(--display);font-size:1rem}
+.sec h2{font-size:clamp(1.9rem,4.4vw,2.8rem)}
+.lede{margin-top:12px;color:var(--ink-soft);max-width:44em;font-size:1.04rem}
+.sec-body{margin-top:30px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r)}
+.note{font-size:.88rem;color:var(--ink-soft);margin-top:14px;max-width:52em}
+.pill{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 9px;border-radius:99px;white-space:nowrap}
+.p-open{background:var(--coral-soft);color:var(--coral)}
+.p-done{background:var(--palm-soft);color:var(--palm)}
+.p-soon{background:var(--mango-soft);color:var(--mango)}
+.p-info{background:var(--sea-soft);color:var(--sea)}
+
+/* TRANSPORT */
+.legs{display:grid;gap:12px}
+.leg{display:grid;grid-template-columns:118px 1fr minmax(180px,250px);gap:18px;align-items:start;padding:18px 20px}
+.leg-date{font-family:var(--mono);font-size:.82rem;color:var(--ink-soft)}
+.leg-date b{display:block;font-family:var(--display);font-weight:400;font-size:1.35rem;color:var(--ink)}
+.leg-main{min-width:0}
+.leg-route{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-weight:600}
+.code{font-family:var(--mono);font-weight:600;font-size:1.05rem;letter-spacing:.04em}
+.leg-route .arr{color:var(--ink-faint);font-weight:400}
+.leg-kind{font-size:.75rem;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.12em;margin-left:auto}
+.leg-main p{color:var(--ink-soft);font-size:.92rem;margin-top:6px}
+.leg-main .links{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.chip-link{font-size:.8rem;text-decoration:none;border:1px solid var(--line);border-radius:99px;padding:3px 10px;color:var(--sea)}
+.chip-link:hover{background:var(--sea-soft)}
+.leg-book{display:grid;gap:8px}
+.leg-book label{font-size:.75rem;color:var(--ink-faint);letter-spacing:.06em;text-transform:uppercase}
+.leg-book input[type=text]{width:100%;border:1px solid var(--line);border-radius:10px;padding:7px 10px;font-size:.9rem;font-family:var(--mono)}
+.tog{display:flex;align-items:center;gap:8px;font-size:.88rem;cursor:pointer}
+.tog input{width:18px;height:18px}
+.leg.booked{border-color:var(--palm)}
+@media (max-width:760px){.leg{grid-template-columns:1fr;gap:10px}.leg-kind{margin-left:0}}
+.airports{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.flightbox{padding:22px;margin-bottom:14px}
+.flightbox h3{font-size:1.35rem}
+.via-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:16px}
+.via{border:1px solid var(--line-soft);background:var(--surface-2);border-radius:12px;padding:12px 14px;font-size:.9rem}
+.via b{display:block;font-size:.98rem}
+.via span{color:var(--ink-soft)}
+
+/* MAP */
+.map-layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:22px;align-items:start}
+@media (max-width:820px){.map-layout{grid-template-columns:1fr}}
+.map-wrap{position:relative;padding:8px;overflow:hidden}
+.pmap{display:block;width:100%;height:auto;max-height:78vh}
+.pmap .sea{fill:var(--sea-soft)}
+.pmap .land{fill:var(--surface);stroke:var(--line);stroke-width:1.4;stroke-linejoin:round}
+.pmap .ctx{fill:var(--ink-faint);font-size:13px;font-style:italic;font-family:var(--sans)}
+.pmap .r-fly{fill:none;stroke:var(--sea);stroke-width:2.4;stroke-dasharray:2 7;stroke-linecap:round}
+.pmap .r-boat{fill:none;stroke:var(--coral);stroke-width:3.4;stroke-linecap:round}
+.pmap .r-van{fill:none;stroke:var(--palm);stroke-width:3.4;stroke-linecap:round;stroke-dasharray:9 6}
+.pmap .stop circle.o{fill:var(--surface);stroke:var(--coral);stroke-width:3}
+.pmap .stop circle.i{fill:var(--coral)}
+.pmap .stop.minor circle.o{stroke:var(--ink-faint);stroke-width:2}
+.pmap .stop.minor circle.i{fill:var(--ink-faint)}
+.pmap .stop text{font-family:var(--sans);font-size:15px;font-weight:700;fill:var(--ink);paint-order:stroke;stroke:var(--sea-soft);stroke-width:4px}
+.pmap .stop text.sub{font-size:12px;font-weight:500;fill:var(--ink-soft)}
+.pmap .stop{cursor:pointer}
+.pmap .stop.sel circle.o{stroke-width:5}
+.pmap .stop.now circle.o{animation:pulse 1.8s ease-in-out infinite}
+@keyframes pulse{50%{stroke-width:8;stroke-opacity:.5}}
+.pmap #mover{fill:var(--mango);stroke:var(--surface);stroke-width:2}
+.map-legend{display:flex;flex-wrap:wrap;gap:14px;font-size:.84rem;color:var(--ink-soft);margin-bottom:10px}
+.map-legend i{display:inline-block;width:26px;height:0;border-top:3px solid;vertical-align:middle;margin-right:6px}
+.lg-fly{border-color:var(--sea)!important;border-top-style:dotted!important}
+.lg-boat{border-color:var(--coral)!important}
+.lg-van{border-color:var(--palm)!important;border-top-style:dashed!important}
+.map-play{position:absolute;right:16px;bottom:16px}
+.stop-panel{padding:22px}
+.stop-panel h3{font-size:1.7rem}
+.stop-panel .when{font-family:var(--mono);font-size:.82rem;color:var(--coral);margin-top:4px}
+.stop-panel p{margin-top:12px;color:var(--ink-soft)}
+.stop-panel ul{margin:12px 0 0;padding-left:18px;color:var(--ink-soft);font-size:.94rem}
+.stop-panel li{margin:4px 0}
+.stop-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.stop-tabs button{border:1px solid var(--line);background:transparent;color:var(--ink-soft);border-radius:99px;padding:5px 12px;font-size:.84rem}
+.stop-tabs button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.facts-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:16px}
+.facts-row div{background:var(--surface-2);border-radius:10px;padding:10px 12px}
+.facts-row small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-faint)}
+.facts-row b{font-family:var(--display);font-weight:400;font-size:1.25rem}
+
+/* PLAN */
+.plan-tools{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:18px}
+.plan-hint{font-size:.88rem;color:var(--ink-soft)}
+.plan-list{display:grid;gap:0;border-left:2px solid var(--line);margin-left:8px}
+.chapter{margin:26px 0 10px -10px;display:flex;align-items:center;gap:12px}
+.chapter:first-child{margin-top:0}
+.chapter i{width:18px;height:18px;border-radius:50%;background:var(--bg);border:3px solid var(--coral);flex-shrink:0}
+.chapter h3{font-size:1.5rem}
+.chapter span{font-family:var(--mono);font-size:.78rem;color:var(--ink-faint)}
+.day{position:relative;margin:0 0 12px 22px;padding:16px 18px;scroll-margin-top:76px}
+.day::before{content:"";position:absolute;left:-29px;top:24px;width:12px;height:12px;border-radius:50%;background:var(--surface);border:2px solid var(--line)}
+.day.done::before{background:var(--palm);border-color:var(--palm)}
+.day.today{border-color:var(--mango);box-shadow:0 0 0 3px var(--mango-soft)}
+.day.today::before{background:var(--mango);border-color:var(--mango)}
+.day-head{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap}
+.day-date{font-family:var(--mono);font-size:.8rem;color:var(--ink-faint);min-width:94px}
+.day-date b{color:var(--coral);font-weight:600}
+.day-head h4{font-family:var(--sans);font-weight:700;font-size:1.06rem;flex:1;min-width:200px}
+.day-stay{font-size:.8rem;color:var(--ink-faint)}
+.day ul{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:5px}
+.day li{display:grid;grid-template-columns:86px 1fr;gap:10px;font-size:.93rem;color:var(--ink-soft)}
+.day li b{font-family:var(--mono);font-size:.76rem;font-weight:500;color:var(--sea);padding-top:3px;text-transform:uppercase;letter-spacing:.04em}
+@media (max-width:520px){.day li{grid-template-columns:1fr;gap:0}}
+.day .tip{margin-top:10px;font-size:.88rem;background:var(--mango-soft);color:var(--ink);border-radius:10px;padding:8px 12px}
+.day-foot{display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap}
+.day-foot textarea{flex:1;min-width:200px;border:1px solid var(--line-soft);background:var(--surface-2);border-radius:10px;padding:7px 10px;font-size:.88rem;resize:vertical;min-height:38px}
+.day-foot label{font-size:.85rem;display:flex;gap:6px;align-items:center;color:var(--ink-soft);cursor:pointer}
+
+/* STAYS */
+.stay-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.stay{padding:18px 20px;display:flex;flex-direction:column;gap:10px}
+.stay-top{display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap}
+.stay h4{font-size:1.3rem}
+.stay .n{font-family:var(--mono);font-size:.78rem;color:var(--ink-faint)}
+.stay p{font-size:.9rem;color:var(--ink-soft)}
+.stay dl{margin:0;display:grid;gap:6px;font-size:.88rem}
+.stay dt{font-weight:700;color:var(--ink)}
+.stay dd{margin:0 0 4px;color:var(--ink-soft)}
+.stay-form{display:grid;gap:6px;border-top:1px dashed var(--line);padding-top:10px;margin-top:auto}
+.stay-form input{border:1px solid var(--line);border-radius:10px;padding:6px 10px;font-size:.88rem;width:100%}
+.stay-form .lbl{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-faint)}
+
+/* CHECKLISTS */
+.check-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.clist{padding:18px 20px}
+.clist-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.clist h3{font-size:1.3rem}
+.clist .prog{font-family:var(--mono);font-size:.8rem;color:var(--ink-faint)}
+.bar{height:5px;background:var(--surface-2);border-radius:99px;margin:10px 0 12px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--palm);border-radius:99px;transition:width .3s}
+.citem{display:flex;gap:10px;align-items:flex-start;padding:6px 0;border-bottom:1px solid var(--line-soft);font-size:.92rem;cursor:pointer}
+.citem:last-of-type{border-bottom:0}
+.citem input{margin-top:4px;width:17px;height:17px;flex-shrink:0}
+.citem span{flex:1;min-width:0}
+.citem small{display:block;color:var(--ink-faint);font-size:.8rem}
+.citem.ck span{color:var(--ink-faint);text-decoration:line-through}
+.citem .due{font-family:var(--mono);font-size:.72rem;color:var(--coral);white-space:nowrap}
+.citem .x{border:0;background:transparent;color:var(--ink-faint);font-size:1rem;padding:0 4px}
+.add-row{display:flex;gap:6px;margin-top:10px}
+.add-row input{flex:1;min-width:0;border:1px solid var(--line);border-radius:10px;padding:6px 10px;font-size:.88rem}
+.add-row button{border:1px solid var(--line);background:var(--surface-2);color:var(--ink);border-radius:10px;padding:6px 12px}
+
+/* TIMELINE */
+.tl{display:grid;gap:0}
+.tl-row{display:grid;grid-template-columns:120px 1fr auto;gap:16px;align-items:center;padding:13px 18px;border-bottom:1px solid var(--line-soft)}
+.tl-row:last-child{border-bottom:0}
+.tl-date{font-family:var(--mono);font-size:.84rem}
+.tl-date small{display:block;color:var(--ink-faint);font-size:.74rem}
+.tl-row .t{font-weight:600}
+.tl-row .t small{display:block;font-weight:400;color:var(--ink-soft);font-size:.86rem}
+.tl-row.ck .t{color:var(--ink-faint);text-decoration:line-through}
+.tl-row.late .tl-date{color:var(--coral)}
+.tl-month{padding:10px 18px;background:var(--surface-2);font-family:var(--mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+@media (max-width:600px){.tl-row{grid-template-columns:1fr auto;gap:4px 12px}.tl-date{grid-column:1/-1}}
+
+/* BUDGET */
+.budget{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:18px}
+@media (max-width:820px){.budget{grid-template-columns:1fr}}
+.b-in{padding:20px;display:grid;gap:14px;align-content:start}
+.b-in .row{display:grid;grid-template-columns:1fr 130px;gap:10px;align-items:center;font-size:.92rem}
+.b-in .row small{display:block;color:var(--ink-faint);font-size:.78rem}
+.b-in input[type=number]{width:100%;border:1px solid var(--line);border-radius:10px;padding:6px 10px;text-align:right;font-family:var(--mono);font-size:.9rem}
+.seg{display:flex;border:1px solid var(--line);border-radius:99px;padding:3px;gap:2px;flex-wrap:wrap}
+.seg button{flex:1;border:0;background:transparent;color:var(--ink-soft);border-radius:99px;padding:7px 10px;font-size:.86rem;font-weight:600}
+.seg button.on{background:var(--sea);color:var(--on-sea)}
+.b-out{padding:22px}
+.b-total{display:flex;gap:24px;flex-wrap:wrap;align-items:baseline}
+.b-total div small{display:block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint)}
+.b-total b{font-family:var(--display);font-weight:400;font-size:2.6rem;line-height:1.1}
+.b-total .pp b{font-size:1.7rem;color:var(--ink-soft)}
+.b-rows{margin-top:18px;display:grid;gap:9px}
+.b-row{display:grid;grid-template-columns:150px 1fr 82px;gap:10px;align-items:center;font-size:.88rem}
+.b-row .track{height:10px;background:var(--surface-2);border-radius:99px;overflow:hidden}
+.b-row .track i{display:block;height:100%;border-radius:99px;background:var(--sea)}
+.b-row .v{text-align:right;font-family:var(--mono);font-size:.84rem}
+@media (max-width:480px){.b-row{grid-template-columns:110px 1fr 70px}}
+.fx{margin-top:20px;padding-top:16px;border-top:1px dashed var(--line);display:flex;gap:10px;flex-wrap:wrap;align-items:center;font-size:.92rem}
+.fx input{width:110px;border:1px solid var(--line);border-radius:10px;padding:6px 10px;font-family:var(--mono);text-align:right}
+.fx output{font-family:var(--mono);font-weight:600}
+
+/* LANGUAGE */
+.lang-tools{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+.lang-tools input{flex:1;min-width:200px;border:1px solid var(--line);border-radius:99px;padding:8px 14px}
+.tbl-wrap{overflow-x:auto}
+table.ph{width:100%;border-collapse:collapse;font-size:.93rem;min-width:560px}
+table.ph th{text-align:left;font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);font-weight:500;padding:12px 16px;border-bottom:1px solid var(--line)}
+table.ph td{padding:10px 16px;border-bottom:1px solid var(--line-soft);vertical-align:top}
+table.ph tr:last-child td{border-bottom:0}
+table.ph td.tg{font-weight:700;color:var(--sea)}
+table.ph td.tg small{display:block;font-weight:400;color:var(--ink-faint);font-family:var(--mono);font-size:.76rem}
+table.ph td.bs{color:var(--coral);font-weight:600}
+.po{padding:18px 20px;margin-top:14px;display:flex;gap:16px;align-items:flex-start}
+.po b.big{font-family:var(--display);font-weight:400;font-size:2.4rem;color:var(--coral);line-height:1}
+
+/* FOOD + QUEST */
+.food-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.food{padding:16px 18px;display:flex;flex-direction:column;gap:6px;cursor:pointer;transition:border-color .15s}
+.food:hover{border-color:var(--sea)}
+.food-top{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.food h4{font-size:1.2rem}
+.food p{font-size:.88rem;color:var(--ink-soft)}
+.food .where{font-size:.78rem;color:var(--ink-faint);margin-top:auto}
+.food input{width:18px;height:18px}
+.food.ck{border-color:var(--palm);background:var(--palm-soft)}
+.quest-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;margin:44px 0 14px}
+.quest-head h3{font-size:1.6rem}
+.quest-head span{font-family:var(--mono);color:var(--ink-faint);font-size:.85rem}
+.quest{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px}
+.qi{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;font-size:.92rem;cursor:pointer}
+.qi input{margin-top:3px;width:18px;height:18px;flex-shrink:0}
+.qi small{display:block;color:var(--ink-faint);font-size:.8rem}
+.qi.ck{border-color:var(--palm);background:var(--palm-soft)}
+
+/* GUIDE */
+.guide-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.g-card{padding:20px 22px}
+.g-card h3{font-size:1.35rem;margin-bottom:10px}
+.g-card ul{margin:0;padding-left:18px;display:grid;gap:7px;font-size:.93rem;color:var(--ink-soft)}
+.g-card li b{color:var(--ink)}
+.weather{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:14px}
+.w{padding:16px 18px}
+.w h4{font-size:1.15rem}
+.w .temp{font-family:var(--display);font-size:2rem;color:var(--coral);margin:4px 0}
+.w p{font-size:.88rem;color:var(--ink-soft)}
+.w .rain{display:flex;gap:3px;margin-top:8px;align-items:flex-end;height:30px}
+.w .rain i{flex:1;background:var(--sea);opacity:.75;border-radius:2px 2px 0 0}
+.w .rain-l{font-size:.72rem;color:var(--ink-faint);margin-top:4px}
+
+/* EMERGENCY */
+.em-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.em{padding:16px 18px}
+.em small{display:block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint)}
+.em b{display:block;font-family:var(--mono);font-size:1.25rem;margin:4px 0;user-select:all}
+.em p{font-size:.86rem;color:var(--ink-soft)}
+.em button{margin-top:8px;border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:99px;padding:4px 12px;font-size:.8rem}
+.em.hot{border-color:var(--coral)}
+.em.hot b{color:var(--coral);font-size:2rem;font-family:var(--display);font-weight:400}
+
+footer{padding-block:60px 50px;color:var(--ink-faint);font-size:.85rem;text-align:center}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%) translateY(120px);background:var(--ink);color:var(--bg);padding:9px 18px;border-radius:99px;font-size:.88rem;transition:transform .25s;z-index:99}
+.toast.on{transform:translateX(-50%) translateY(0)}
+</style>
+
+<nav class="nav" aria-label="Hauptnavigation">
+  <div class="wrap">
+    <a class="brand" href="#top">Pilipinas <b>’27</b></a>
+    <div class="nav-links" id="navLinks">
+      <a href="#anreise">Anreise</a><a href="#karte">Karte</a><a href="#plan">Reiseplan</a><a href="#unterkunft">Unterkünfte</a><a href="#listen">Checklisten</a><a href="#fristen">Fristen</a><a href="#budget">Budget</a><a href="#sprache">Sprache</a><a href="#essen">Essen</a><a href="#guide">Guide</a><a href="#notfall">Notfall</a>
+    </div>
+    <span class="clock" title="Aktuelle Uhrzeit auf den Philippinen (UTC+8)"><i></i><span class="lbl">Manila</span><b id="phtClock">--:--</b></span>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <canvas id="glint" aria-hidden="true"></canvas>
+  <svg class="hero-scene" viewBox="0 0 1440 320" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <circle cx="1040" cy="150" r="70" fill="#FFD08A" opacity=".18"/>
+    <circle cx="1040" cy="150" r="42" fill="#FFC774" opacity=".95"/>
+    <!-- Karstfelsen -->
+    <path fill="#20323F" d="M0 210 C 40 120, 70 90, 96 108 C 118 70, 150 66, 168 120 C 190 150, 208 180, 230 210 Z"/>
+    <path fill="#172833" d="M150 210 C 190 150, 214 96, 248 92 C 280 88, 290 130, 300 150 C 320 128, 346 140, 360 210 Z"/>
+    <path fill="#1C2E3B" d="M1180 210 C 1196 160, 1220 120, 1250 112 C 1270 80, 1300 84, 1318 124 C 1340 110, 1372 120, 1392 210 Z"/>
+    <path fill="#152530" d="M1300 210 C 1330 170, 1360 150, 1390 150 C 1410 140, 1440 150, 1440 160 L 1440 210 Z"/>
+    <path fill="#25384A" d="M720 210 C 740 190, 760 178, 782 182 C 796 168, 818 172, 830 210 Z"/>
+    <!-- Wasser -->
+    <rect x="0" y="208" width="1440" height="112" fill="#0C3440"/>
+    <g stroke="#FFC774" stroke-linecap="round" opacity=".55">
+      <line x1="990" y1="222" x2="1090" y2="222" stroke-width="3"/>
+      <line x1="1005" y1="236" x2="1075" y2="236" stroke-width="2.5"/>
+      <line x1="1018" y1="250" x2="1062" y2="250" stroke-width="2"/>
+      <line x1="1028" y1="264" x2="1052" y2="264" stroke-width="1.6"/>
+    </g>
+    <!-- Bangka -->
+    <g transform="translate(560,236)">
+      <path d="M-70 0 L70 0 L52 14 L-54 14 Z" fill="#0A1A22"/>
+      <path d="M-20 0 L-20 -16 L24 -16 L24 0" fill="none" stroke="#0A1A22" stroke-width="4"/>
+      <path d="M-26 -18 L30 -18" stroke="#0A1A22" stroke-width="5"/>
+      <path d="M-90 10 L90 10 M-60 0 L-80 10 M60 0 L80 10 M-30 0 L-40 10 M30 0 L40 10" stroke="#0A1A22" stroke-width="2.5" fill="none"/>
+    </g>
+    <!-- Palmen-Ufer -->
+    <path fill="#06161C" d="M0 320 L0 268 C 120 262, 260 270, 380 286 C 300 300, 160 312, 0 320 Z"/>
+    <g fill="none" stroke="#06161C" stroke-linecap="round">
+      <path d="M120 270 C 128 220, 140 180, 162 150" stroke-width="7"/>
+      <path d="M220 276 C 214 236, 204 206, 186 182" stroke-width="6"/>
+    </g>
+    <g fill="#06161C">
+      <path d="M162 150 C 140 136, 112 138, 92 156 C 118 146, 138 148, 162 152 Z"/>
+      <path d="M162 150 C 150 128, 128 118, 104 120 C 128 126, 146 136, 160 152 Z"/>
+      <path d="M162 150 C 182 132, 208 130, 230 142 C 206 140, 186 144, 164 154 Z"/>
+      <path d="M162 150 C 178 158, 196 174, 204 196 C 190 178, 176 166, 160 154 Z"/>
+      <path d="M162 150 C 154 168, 140 184, 124 192 C 140 176, 150 164, 160 150 Z"/>
+      <path d="M186 182 C 168 172, 146 174, 132 186 C 150 180, 168 180, 186 184 Z"/>
+      <path d="M186 182 C 200 166, 222 162, 242 170 C 222 170, 204 176, 188 186 Z"/>
+      <path d="M186 182 C 198 192, 208 208, 210 224 C 200 208, 192 198, 184 186 Z"/>
+    </g>
+    <path fill="#06161C" d="M1440 320 L1440 274 C 1340 270, 1220 280, 1120 296 C 1220 306, 1330 314, 1440 320 Z"/>
+  </svg>
+  <div class="wrap hero-inner">
+    <p class="kicker">Deutschland <span>→</span> Manila <span>→</span> 3 Inseln</p>
+    <h1>Drei Wochen <em>Inselzeit.</em></h1>
+    <p class="hero-sub"><b>18. Januar – 7. Februar 2027</b> · 21 Tage Philippinen mitten in der Trockenzeit: Surf und Kokospalmen auf Siargao, Lagunen und Weltkriegs-Wracks vor Coron, Kalkfelsen und Bangka-Touren in El Nido.</p>
+    <div class="islands">
+      <span><b>7 N</b>Siargao</span><span><b>4 N</b>Coron</span><span><b>5 N</b>El Nido</span><span><b>+2 N</b>Manila &amp; Puerto Princesa</span>
+    </div>
+    <div class="countdown num" role="timer" aria-label="Countdown bis zum Abflugtag">
+      <div class="cd"><b id="cdD">–</b><small>Tage</small></div>
+      <div class="cd"><b id="cdH">–</b><small>Stunden</small></div>
+      <div class="cd"><b id="cdM">–</b><small>Minuten</small></div>
+      <div class="cd"><b id="cdS">–</b><small>Sekunden</small></div>
+    </div>
+    <p class="phase" id="phase"></p>
+    <div class="cta">
+      <a class="btn btn-hero" href="#plan">Zum Reiseplan</a>
+      <a class="btn btn-ghost" href="#fristen">Was jetzt zu buchen ist</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap fact">
+  <div class="fact-card">
+    <span class="mark" aria-hidden="true">✦</span>
+    <div>
+      <h3>Philippinen-Moment des Tages</h3>
+      <p id="factText">Die Philippinen bestehen aus 7.641 Inseln – ihr besucht drei davon, und jede fühlt sich wie ein eigenes Land an.</p>
+    </div>
+    <button type="button" id="factNext">Noch einer →</button>
+  </div>
+</div>
+
+<main>
+<!-- ANREISE -->
+<section class="sec wrap" id="anreise">
+  <p class="eyebrow"><i>Biyahe</i>Anreise &amp; Strecken</p>
+  <h2>Sieben Etappen, noch alle offen</h2>
+  <p class="lede">Noch ist nichts gebucht, und das ist im Oktober genau richtig. Zuerst die Langstrecke festmachen, dann richten sich die Inlandsflüge nach euren Ankunfts- und Abflugzeiten. Sobald etwas gebucht ist: Haken setzen und Flugnummer oder Buchungscode eintragen. Das bleibt hier im Browser gespeichert.</p>
+  <div class="sec-body">
+    <div class="card flightbox">
+      <h3>Langstrecke: wo es am günstigsten ist</h3>
+      <p class="note" style="margin-top:6px">Es gibt keine Direktflüge nach Manila. Ihr steigt einmal um, typisch sind 15–19 Stunden Reisezeit. Für Hin am 18.01. und Rück am 06.02. lohnt es sich, mehrere Abflughäfen zu vergleichen. Amsterdam, Zürich oder Wien sind oft deutlich billiger als Frankfurt, ein Zug dorthin rechnet sich schnell. Als Ziel ist auch Cebu (CEB) eine Option: Von dort fliegt ihr direkt nach Siargao und nach Coron.</p>
+      <div class="via-grid">
+        <div class="via"><b>via Doha</b><span>Qatar Airways · ab FRA, MUC, BER u. a.</span></div>
+        <div class="via"><b>via Dubai</b><span>Emirates · ab FRA, MUC, DUS, HAM</span></div>
+        <div class="via"><b>via Istanbul</b><span>Turkish Airlines · ab fast jedem deutschen Flughafen</span></div>
+        <div class="via"><b>via Singapur / Hongkong</b><span>Singapore Airlines, Cathay Pacific · oft bequemere Zeiten</span></div>
+      </div>
+      <p class="note">Preise vergleichen (Hin 18.01., Rück 06.02. ab Manila):</p>
+      <div class="airports" id="airportLinks"></div>
+      <p class="note">Achtet beim Rückflug auf den 6. Februar 2027: Das ist das chinesische Neujahrsfest. Flüge über Singapur und Hongkong werden rund um dieses Datum voll und teuer, über Doha, Dubai oder Istanbul spürt man das kaum.</p>
+    </div>
+    <div class="legs" id="legs"></div>
+  </div>
+</section>
+
+<!-- KARTE -->
+<section class="sec wrap" id="karte">
+  <p class="eyebrow"><i>Mapa</i>Karte</p>
+  <h2>Eure Route durch den Archipel</h2>
+  <p class="lede">Gepunktet sind Flüge, rot die Fähre von Coron nach El Nido, grün gestrichelt die Vanfahrt nach Puerto Princesa. Tippt auf einen Ort, dann seht ihr rechts Daten, Highlights und den Sprung zum passenden Reisetag. Während der Reise pulsiert der Ort, an dem ihr gerade seid.</p>
+  <div class="sec-body map-layout">
+    <div>
+      <div class="map-legend">
+        <span><i class="lg-fly"></i>Flug</span><span><i class="lg-boat"></i>Fähre</span><span><i class="lg-van"></i>Van</span>
+      </div>
+      <div class="card map-wrap">
+        <svg class="pmap" id="pmap" viewBox="0 0 640 840" role="img" aria-label="Schematische Karte der Philippinen mit eurer Route Manila, Siargao, Coron, El Nido und Puerto Princesa"></svg>
+        <button type="button" class="btn btn-sm map-play" id="mapPlay">▶ Route abspielen</button>
+      </div>
+      <p class="note">Schematische Karte, Küstenlinien vereinfacht.</p>
+    </div>
+    <div>
+      <div class="stop-tabs" id="stopTabs"></div>
+      <div class="card stop-panel" id="stopPanel" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PLAN -->
+<section class="sec wrap" id="plan">
+  <p class="eyebrow"><i>Plano</i>Reiseplan</p>
+  <h2>21 Tage, Tag für Tag</h2>
+  <p class="lede">Ein Vorschlag mit Puffern für Wind und Wetter. Auf Bootstouren und Fähren wartet man im Januar gern mal einen Tag. Notizen tippen speichert automatisch, unterwegs Tage abhaken. Der heutige Tag leuchtet während der Reise golden.</p>
+  <div class="sec-body">
+    <div class="plan-tools">
+      <button class="btn btn-sm" id="todayBtn" type="button" hidden>↓ Zum heutigen Tag</button>
+      <span class="plan-hint" id="planHint"></span>
+      <button class="btn btn-line btn-sm" id="planReset" type="button" style="margin-left:auto">Notizen &amp; Haken zurücksetzen</button>
+    </div>
+    <div class="plan-list" id="planList"></div>
+  </div>
+</section>
+
+<!-- UNTERKÜNFTE -->
+<section class="sec wrap" id="unterkunft">
+  <p class="eyebrow"><i>Matutuluyan</i>Unterkünfte</p>
+  <h2>Wo ihr am besten wohnt</h2>
+  <p class="lede">Fünf Orte, 18 Nächte. Für jeden Ort die Viertel, die sich lohnen, und was ihr pro Nacht für ein Doppelzimmer ungefähr zahlt. Januar und Februar sind Hochsaison: Gute Zimmer auf Siargao und in El Nido sind bis Mitte November weg. Gebucht? Namen und Bestätigungsnummer unten eintragen.</p>
+  <div class="sec-body stay-grid" id="stayGrid"></div>
+</section>
+
+<!-- CHECKLISTEN -->
+<section class="sec wrap" id="listen">
+  <p class="eyebrow"><i>Listahan</i>Checklisten</p>
+  <h2>Nichts vergessen</h2>
+  <p class="lede">Vier Listen von „diese Woche“ bis zum Kofferpacken. Haken setzen, eigene Punkte ergänzen, der Stand bleibt gespeichert. Die Punkte mit Datum tauchen auch unten bei den Fristen auf.</p>
+  <div class="sec-body check-grid" id="checkGrid"></div>
+</section>
+
+<!-- FRISTEN -->
+<section class="sec wrap" id="fristen">
+  <p class="eyebrow"><i>Takdang petsa</i>Fristen</p>
+  <h2>Wann ihr was erledigen müsst</h2>
+  <p class="lede">Alle Termine bis zur Abreise in einer Zeitleiste. Überfällige stehen in Rot. Abhaken hier hakt auch die Checkliste ab.</p>
+  <div class="sec-body card tl" id="timeline"></div>
+</section>
+
+<!-- BUDGET -->
+<section class="sec wrap" id="budget">
+  <p class="eyebrow"><i>Gastos</i>Budget</p>
+  <h2>Was die Reise ungefähr kostet</h2>
+  <p class="lede">Ein Rechner mit realistischen Richtwerten für Januar 2027. Reisestil wählen, Zahlen anpassen, sobald ihr echte Preise habt. Die Werte sind geschätzt, nicht recherchiert pro Anbieter.</p>
+  <div class="sec-body budget">
+    <div class="card b-in">
+      <div class="seg" id="styleSeg" role="group" aria-label="Reisestil">
+        <button type="button" data-s="0">Rucksack</button><button type="button" data-s="1">Komfort</button><button type="button" data-s="2">Gönnen</button>
+      </div>
+      <div class="row"><label for="bPers">Reisende</label><input type="number" id="bPers" min="1" max="12" value="2"></div>
+      <div class="row"><label for="bLong">Langstreckenflug<small>€ pro Person, hin &amp; zurück</small></label><input type="number" id="bLong" min="0" step="10"></div>
+      <div class="row"><label for="bDom">Inlandsflüge<small>€ p. P., 3 Flüge mit Gepäck</small></label><input type="number" id="bDom" min="0" step="10"></div>
+      <div class="row"><label for="bRoom">Unterkunft<small>€ pro Zimmer und Nacht, 18 Nächte</small></label><input type="number" id="bRoom" min="0" step="5"></div>
+      <div class="row"><label for="bFood">Essen &amp; Trinken<small>€ p. P. und Tag, 19 Tage</small></label><input type="number" id="bFood" min="0" step="1"></div>
+      <div class="row"><label for="bTours">Touren &amp; Aktivitäten<small>€ p. P., ganze Reise</small></label><input type="number" id="bTours" min="0" step="10"></div>
+      <div class="row"><label for="bLocal">Transport vor Ort<small>€ p. P.: Fähre, Van, Scooter, Tricycle</small></label><input type="number" id="bLocal" min="0" step="10"></div>
+      <div class="row"><label for="bMisc">Gebühren &amp; Sonstiges<small>€ p. P.: Umweltgebühren, eSIM, Trinkgeld</small></label><input type="number" id="bMisc" min="0" step="10"></div>
+    </div>
+    <div class="card b-out">
+      <div class="b-total">
+        <div><small>Gesamt</small><b class="num" id="bTotal">–</b></div>
+        <div class="pp"><small>pro Person</small><b class="num" id="bPP">–</b></div>
+      </div>
+      <div class="b-rows" id="bRows"></div>
+      <div class="fx">
+        <label for="fxRate">1 € =</label><input type="number" id="fxRate" step="0.5" value="64"><span>₱</span>
+        <span style="flex-basis:100%;height:0"></span>
+        <input type="number" id="fxPhp" value="1500" step="50" aria-label="Betrag in Peso"><span>₱ sind</span><output id="fxEur" class="num">–</output>
+      </div>
+      <p class="note">Kurs vor der Reise anpassen. In bar zahlt ihr vor Ort vor allem Touren, Tricycles, Umweltgebühren und kleine Restaurants.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SPRACHE -->
+<section class="sec wrap" id="sprache">
+  <p class="eyebrow"><i>Wika</i>Sprache</p>
+  <h2>30 Sätze, die Herzen öffnen</h2>
+  <p class="lede">Englisch klappt fast überall. Ein paar Worte Tagalog (Manila, Palawan) oder Bisaya (Siargao) bringen trotzdem jedes Mal ein Lächeln. Die Aussprache ist einfach: Man spricht, wie man schreibt, die Betonung steht in Großbuchstaben.</p>
+  <div class="sec-body">
+    <div class="lang-tools"><input type="search" id="langQ" placeholder="Suchen, z. B. danke, Wasser, teuer …" aria-label="Sätze durchsuchen"></div>
+    <div class="card tbl-wrap">
+      <table class="ph"><thead><tr><th>Deutsch</th><th>Tagalog</th><th>Bisaya (Siargao)</th></tr></thead><tbody id="langBody"></tbody></table>
+    </div>
+    <div class="card po">
+      <b class="big">po</b>
+      <p>Das kleine Wort <b>po</b> ist Höflichkeit pur. Hängt es an fast jeden Satz gegenüber Älteren, Bedienungen oder Fahrern: „Salamat po“, „Magkano po?“. Statt „oo“ (ja) sagt man respektvoll <b>„opo“</b>. Auf Siargao versteht man es auch, dort sagt man aber oft einfach „Salamat“.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ESSEN -->
+<section class="sec wrap" id="essen">
+  <p class="eyebrow"><i>Pagkain</i>Essen &amp; Insel-Quest</p>
+  <h2>Was ihr probiert haben müsst</h2>
+  <p class="lede">Die philippinische Küche ist süß, sauer und salzig zugleich, selten scharf. Antippen, sobald ihr es probiert habt.</p>
+  <div class="sec-body">
+    <div class="food-grid" id="foodGrid"></div>
+    <div class="quest-head"><h3>Insel-Quest</h3><span id="questProg"></span></div>
+    <div class="quest" id="quest"></div>
+  </div>
+</section>
+
+<!-- GUIDE -->
+<section class="sec wrap" id="guide">
+  <p class="eyebrow"><i>Gabay</i>Guide</p>
+  <h2>Gut vorbereitet ins Inselleben</h2>
+  <p class="lede">Wetter, Etikette und die praktischen Dinge, die vor Ort den Unterschied machen.</p>
+  <div class="sec-body">
+    <div class="weather" id="weather"></div>
+    <div class="guide-grid" id="guideGrid"></div>
+  </div>
+</section>
+
+<!-- NOTFALL -->
+<section class="sec wrap" id="notfall">
+  <p class="eyebrow"><i>Tulong</i>Notfall</p>
+  <h2>Hoffentlich nie gebraucht</h2>
+  <p class="lede">Die wichtigsten Nummern zum Kopieren. Macht vor der Abreise einen Screenshot, denn auf den Booten habt ihr oft kein Netz.</p>
+  <div class="sec-body em-grid" id="emGrid"></div>
+  <div class="sec-body card" style="padding:18px 20px;margin-top:14px">
+    <label for="insNo" style="font-weight:700">Eure Auslandskrankenversicherung</label>
+    <p class="note" style="margin-top:4px">Notruf-Nummer und Policennummer eintragen, bleibt nur in diesem Browser.</p>
+    <input type="text" id="insNo" placeholder="z. B. +49 … · Police 123456" style="width:100%;margin-top:10px;border:1px solid var(--line);border-radius:10px;padding:8px 12px;font-family:var(--mono)">
+  </div>
+</section>
+</main>
+
+<footer class="wrap">Ingat kayo! · Gute Reise. · Alle Angaben ohne Gewähr, Preise und Fahrpläne vor der Buchung prüfen.</footer>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function(){
+"use strict";
+/* ---------- helpers ---------- */
+var K='ph27:';
+function load(k,d){try{var v=localStorage.getItem(K+k);return v==null?d:JSON.parse(v)}catch(e){return d}}
+function save(k,v){try{localStorage.setItem(K+k,JSON.stringify(v))}catch(e){}}
+function $(id){return document.getElementById(id)}
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function toast(t){var el=$('toast');el.textContent=t;el.classList.add('on');clearTimeout(toast._t);toast._t=setTimeout(function(){el.classList.remove('on')},1800)}
+var WD=['So','Mo','Di','Mi','Do','Fr','Sa'];
+var MON=['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'];
+function D(s){var p=s.split('-');return new Date(+p[0],+p[1]-1,+p[2])}
+function fmt(s){var d=D(s);return WD[d.getDay()]+', '+d.getDate()+'.'+(d.getMonth()+1)+'.'}
+function fmtY(s){var d=D(s);return d.getDate()+'.'+(d.getMonth()+1)+'.'+d.getFullYear()}
+function todayStr(){var d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+function daysBetween(a,b){return Math.round((D(b)-D(a))/864e5)}
+function eur(n){return Math.round(n).toLocaleString('de-DE')+' €'}
+
+var START='2027-01-18', END='2027-02-07';
+
+/* ---------- clock + countdown ---------- */
+var clockFmt;try{clockFmt=new Intl.DateTimeFormat('de-DE',{timeZone:'Asia/Manila',hour:'2-digit',minute:'2-digit'})}catch(e){}
+var depart=new Date(2027,0,18,12,0,0);
+function tick(){
+  if(clockFmt)$('phtClock').textContent=clockFmt.format(new Date());
+  var ms=depart-new Date();
+  if(ms>0){
+    $('cdD').textContent=Math.floor(ms/864e5);
+    $('cdH').textContent=Math.floor(ms/36e5)%24;
+    $('cdM').textContent=Math.floor(ms/6e4)%60;
+    $('cdS').textContent=Math.floor(ms/1e3)%60;
+  }else{['cdD','cdH','cdM','cdS'].forEach(function(i){$(i).textContent='0'})}
+}
+tick();setInterval(tick,1000);
+
+/* ---------- facts ---------- */
+var FACTS=[
+ 'Die Philippinen bestehen aus 7.641 Inseln – ihr besucht drei davon, und jede fühlt sich wie ein eigenes Land an.',
+ 'Im Land werden über 170 Sprachen gesprochen. Tagalog und Bisaya sind die größten, Englisch ist zweite Amtssprache.',
+ 'Der Jeepney stammt von Militär-Jeeps der US-Armee ab, die nach dem Zweiten Weltkrieg zu bunten Sammeltaxis umgebaut wurden.',
+ 'Unter der Wasseroberfläche vor Coron liegen mehr als ein Dutzend japanische Kriegsschiffe, versenkt bei einem US-Luftangriff im September 1944.',
+ 'Cloud 9 auf Siargao gilt als eine der besten Riffwellen Asiens. Der Name stammt von einem Schokoriegel, der auf einem Surf-Foto von 1993 zu sehen war.',
+ 'Filipinos singen leidenschaftlich gern Karaoke, hier „Videoke“ genannt. Eine Maschine steht in fast jedem Dorf.',
+ 'Der Tarsier, einer der kleinsten Primaten der Welt, lebt auf Bohol und Mindanao. Seine Augen sind größer als sein Gehirn.',
+ 'Die Philippinen sind der zweitgrößte Kokosnuss-Produzent der Welt.',
+ 'Weihnachten beginnt hier im September und endet erst Mitte Januar. Ihr landet also gerade nach der längsten Weihnachtszeit der Welt.',
+ '„Filipino Time“ ist ein geflügeltes Wort: Ein Treffen um 7 heißt oft eher „so gegen halb 8“.',
+ 'Basketball ist Volkssport. Selbst im kleinsten Barangay steht irgendwo ein Korb.',
+ 'Kayangan Lake auf Coron wird oft als sauberster See Asiens bezeichnet. Das Wasser ist brackig: oben süß, unten salzig.',
+ 'Der Name „Philippinen“ ehrt den spanischen König Philipp II. Spanien regierte über 330 Jahre.',
+ 'Puerto Princesa hat einen der längsten schiffbaren unterirdischen Flüsse der Welt, er ist UNESCO-Welterbe.',
+ 'Halo-halo heißt „Mischmasch“: gestoßenes Eis, Kondensmilch, Bohnen, Früchte, Ube und oben eine Kugel Eis.',
+ 'Die Kalkfelsen von El Nido sind rund 250 Millionen Jahre alt. Sie bestehen aus versteinerten Korallenriffen.',
+ 'Mit „Psst!“ ruft man hier höflich jemanden heran, und mit gespitzten Lippen zeigt man auf Dinge statt mit dem Finger.',
+ 'Jollibee, die Fast-Food-Kette mit der roten Biene, schlägt auf den Philippinen McDonald’s bei weitem. Probiert Spaghetti mit Hotdog-Stückchen.'
+];
+var fi=Math.floor(Date.now()/864e5)%FACTS.length;
+function showFact(){$('factText').textContent=FACTS[fi]}
+showFact();
+$('factNext').addEventListener('click',function(){fi=(fi+1)%FACTS.length;showFact()});
+
+/* ---------- airport links ---------- */
+var APTS=[['FRA','Frankfurt'],['MUC','München'],['DUS','Düsseldorf'],['BER','Berlin'],['HAM','Hamburg'],['STR','Stuttgart'],['AMS','Amsterdam'],['ZRH','Zürich'],['VIE','Wien']];
+$('airportLinks').innerHTML=APTS.map(function(a){
+  return '<a class="chip-link" target="_blank" rel="noopener" href="https://www.skyscanner.de/transport/fluege/'+a[0].toLowerCase()+'/mnl/270118/270206/">'+a[1]+' <span class="mono">'+a[0]+'</span> ↗</a>';
+}).join('')+'<a class="chip-link" target="_blank" rel="noopener" href="https://www.google.com/travel/flights?q=Flights%20from%20Germany%20to%20Manila%20on%202027-01-18%20through%202027-02-06">Google Flights ↗</a>';
+
+/* ---------- legs ---------- */
+var LEGS=[
+ {id:'out',d:'2027-01-18',from:'DEU',to:'MNL',kind:'Langstrecke',txt:'Abflug am Montag, Ankunft in Manila am Dienstag, 19.01. Ideal ist eine Landung am Nachmittag oder Abend: dann eine Nacht am Flughafen schlafen und am nächsten Morgen weiter.',links:[]},
+ {id:'mnl-iao',d:'2027-01-20',from:'MNL',to:'IAO',kind:'Inlandsflug · ca. 1:45 h',txt:'Manila → Siargao (Sayak Airport). Direkt mit Philippine Airlines oder Cebu Pacific, am besten vormittags. Vom Flughafen sind es ca. 45 Minuten im Van nach General Luna.',links:[['Philippine Airlines','https://www.philippineairlines.com'],['Cebu Pacific','https://www.cebupacificair.com']]},
+ {id:'iao-usu',d:'2027-01-27',from:'IAO',to:'USU',kind:'Inlandsflug · mit Umstieg',txt:'Siargao → Coron (Busuanga Airport). Keine Direktverbindung: Umstieg in Cebu oder Manila, zusammen 3–6 Stunden. Unbedingt als ein Ticket buchen. Vom Flughafen fahrt ihr ca. 40 Minuten nach Coron Town.',links:[['Cebu Pacific','https://www.cebupacificair.com'],['Philippine Airlines','https://www.philippineairlines.com']]},
+ {id:'ferry',d:'2027-01-31',from:'Coron',to:'El Nido',kind:'Fähre · ca. 4–5 h',txt:'Schnellfähre morgens ab Coron Town Port. Bei starkem Nordost-Wind (Amihan) fällt sie manchmal aus, deshalb liegt danach kein fixer Termin. Tabletten gegen Seekrankheit einpacken.',links:[['Fährpläne vergleichen','https://www.12go.asia/de/travel/coron/el-nido']]},
+ {id:'van',d:'2027-02-05',from:'El Nido',to:'PPS',kind:'Van · ca. 5–6 h',txt:'Shared Van über gute Straßen nach Puerto Princesa, Abholung meist am Hotel. Wer es bequemer will, nimmt einen privaten Van oder fliegt direkt von El Nido nach Manila (AirSWIFT, teurer, strenges Gepäcklimit).',links:[['Vans vergleichen','https://www.12go.asia/de/travel/el-nido/puerto-princesa']]},
+ {id:'pps-mnl',d:'2027-02-06',from:'PPS',to:'MNL',kind:'Inlandsflug · ca. 1:20 h',txt:'Früh am Morgen fliegen und in Manila mindestens 5 Stunden bis zum Langstreckenflug einplanen. Häufig müsst ihr das Terminal wechseln, das dauert im Verkehr leicht eine Stunde.',links:[['Cebu Pacific','https://www.cebupacificair.com'],['Philippine Airlines','https://www.philippineairlines.com']]},
+ {id:'back',d:'2027-02-06',from:'MNL',to:'DEU',kind:'Langstrecke',txt:'Abflug am Samstagnachmittag oder -abend, Ankunft in Deutschland am Sonntag, 07.02. Den Montag zum Ankommen freihalten, wenn es geht.',links:[]}
+];
+var legState=load('legs',{});
+function renderLegs(){
+  $('legs').innerHTML=LEGS.map(function(l){
+    var s=legState[l.id]||{};
+    return '<article class="card leg'+(s.b?' booked':'')+'" data-id="'+l.id+'">'+
+      '<div class="leg-date">'+fmt(l.d).split(',')[0]+'<b>'+D(l.d).getDate()+'. '+MON[D(l.d).getMonth()].slice(0,3)+'</b></div>'+
+      '<div class="leg-main"><div class="leg-route"><span class="code">'+esc(l.from)+'</span><span class="arr">→</span><span class="code">'+esc(l.to)+'</span><span class="leg-kind">'+esc(l.kind)+'</span></div>'+
+      '<p>'+esc(l.txt)+'</p>'+(l.links.length?'<div class="links">'+l.links.map(function(k){return '<a class="chip-link" target="_blank" rel="noopener" href="'+k[1]+'">'+esc(k[0])+' ↗</a>'}).join('')+'</div>':'')+'</div>'+
+      '<div class="leg-book"><label class="tog"><input type="checkbox" data-k="b"'+(s.b?' checked':'')+'> '+(s.b?'<span class="pill p-done">Gebucht</span>':'<span class="pill p-open">Offen</span>')+'</label>'+
+      '<label for="leg-'+l.id+'">Flug-Nr. / Buchungscode / Zeit</label><input type="text" id="leg-'+l.id+'" data-k="t" value="'+esc(s.t||'')+'" placeholder="z. B. QR 934 · 21:40 · ABC123"></div>'+
+    '</article>';
+  }).join('');
+}
+renderLegs();
+$('legs').addEventListener('change',function(e){
+  var card=e.target.closest('.leg');if(!card)return;var id=card.dataset.id;legState[id]=legState[id]||{};
+  if(e.target.dataset.k==='b'){legState[id].b=e.target.checked;save('legs',legState);renderLegs();toast(e.target.checked?'Als gebucht markiert':'Wieder offen')}
+});
+$('legs').addEventListener('input',function(e){
+  if(e.target.dataset.k!=='t')return;var id=e.target.closest('.leg').dataset.id;legState[id]=legState[id]||{};legState[id].t=e.target.value;save('legs',legState);
+});
+
+/* ---------- days ---------- */
+var CH={manila:'Manila',siargao:'Siargao',coron:'Coron',elnido:'El Nido',pps:'Puerto Princesa',home:'Unterwegs'};
+var DAYS=[
+ {d:'2027-01-18',s:'home',t:'Abflug in Deutschland',stay:'Im Flugzeug',i:[['Tagsüber','Letzte Sachen packen, Pass, Kreditkarten und etwas Bargeld in Euro ins Handgepäck.'],['Abends','Abflug, Umstieg am Golf, in Istanbul oder in Asien.'],['An Bord','Uhr auf Manila-Zeit (+7 h) stellen und nach dieser Zeit schlafen.']],tip:'eTravel-Formular nicht vergessen: frühestens 72 Stunden vor Ankunft, also ab Samstag, 16.01.'},
+ {d:'2027-01-19',s:'manila',t:'Ankunft in Manila',stay:'Hotel nahe Flughafen (Pasay)',i:[['Ankunft','Immigration mit eTravel-QR-Code. Am Flughafen eine SIM von Globe oder Smart kaufen, falls ihr keine eSIM habt.'],['Transfer','Mit Grab-Auto oder Hotelshuttle ins Hotel. Keine Taxis von Schleppern nehmen.'],['Abends','Kurz essen und schlafen. Morgen geht es früh weiter.']],tip:'Am Flughafen-ATM direkt eine größere Summe Peso abheben, auf den Inseln sind Automaten rar.'},
+ {d:'2027-01-20',s:'siargao',t:'Flug nach Siargao',stay:'General Luna',i:[['Vormittag','Flug MNL → IAO. Beim Landeanflug links aus dem Fenster schauen: Palmenwald bis zum Horizont.'],['Mittag','Van nach General Luna, einchecken, Scooter für die Woche organisieren.'],['Abends','Sonnenuntergang am Cloud-9-Boardwalk, danach Abendessen an der Tourism Road.']]},
+ {d:'2027-01-21',s:'siargao',t:'Erste Welle',stay:'General Luna',i:[['Morgens','Surfstunde für Anfänger an einem geschützten Spot, Lehrer gibt es an jeder Ecke.'],['Mittag','Smoothie-Bowl und Café-Hopping in General Luna.'],['Nachmittag','Siesta in der Hängematte, danach Massage.']],tip:'Surfen am besten früh am Morgen, bevor der Wind auffrischt. Rashguard schützt vor Sonnenbrand und Riff.'},
+ {d:'2027-01-22',s:'siargao',t:'Island-Hopping: Naked, Daku, Guyam',stay:'General Luna',i:[['Morgens','Bangka-Tour zu den drei Inseln vor General Luna: Sandbank, Dorfinsel, Palmeninsel.'],['Mittag','Auf Daku gibt es frischen Fisch vom Grill, oft gehört das Mittagessen zur Tour.'],['Abends','Freier Abend, vielleicht eine Bar mit Livemusik.']]},
+ {d:'2027-01-23',s:'siargao',t:'Mit dem Scooter in den Norden',stay:'General Luna',i:[['Morgens','Coconut Road und Palmen-Aussichtspunkt, dann weiter zu den Magpupungko Rock Pools.'],['Mittag','Pacifico Beach: ruhiges Fischerdorf mit langem Strand.'],['Nachmittag','Rückweg über den Tayangban-Höhlenpool.']],tip:'Magpupungko lohnt sich nur bei Ebbe. Gezeiten vorher in einer Tide-App prüfen und den Tag danach legen.'},
+ {d:'2027-01-24',s:'siargao',t:'Sugba Lagoon',stay:'General Luna',i:[['Morgens','Fahrt nach Del Carmen, von dort mit dem Boot durch die Mangroven zur Lagune.'],['Tagsüber','Stand-up-Paddling, Schnorcheln, vom Sprungturm springen.'],['Abends','Zurück in General Luna, Kinilaw (Fischsalat) probieren.']]},
+ {d:'2027-01-25',s:'siargao',t:'Freier Tag',stay:'General Luna',i:[['Optional','Zweite Surfstunde oder ein Board leihen.'],['Optional','Maasin River mit der Palmen-Seilschaukel.'],['Abends','Sonnenuntergang am Strand und Grillfisch.']],tip:'Siargao ist im Januar die regenreichste eurer drei Stationen. Ein freier Tag fängt einen Regentag auf.'},
+ {d:'2027-01-26',s:'siargao',t:'Letzter Siargao-Tag',stay:'General Luna',i:[['Optional','Ganztagstour nach Sohoton Cove (Bucas Grande) mit Höhlen und Quallen-Lagune, früher Start.'],['Alternativ','Gemütlich: Strand, Cafés, Mitbringsel kaufen.'],['Abends','Rucksack packen, Scooter abgeben.']]},
+ {d:'2027-01-27',s:'coron',t:'Weiterflug nach Coron',stay:'Coron Town',i:[['Tagsüber','Flug IAO → USU mit Umstieg in Cebu oder Manila.'],['Ankunft','Van nach Coron Town, einchecken.'],['Abends','Maquinit Hot Springs: Salzwasser-Thermalquelle, abends am schönsten.']]},
+ {d:'2027-01-28',s:'coron',t:'Coron Lagunen-Tour',stay:'Coron Town',i:[['Früh','Tour mit Kayangan Lake (Aussichtspunkt!), Twin Lagoon und Barracuda Lake.'],['Mittag','Grillbuffet auf dem Boot oder an einem Inselstrand.'],['Nachmittag','Skeleton Wreck: ein Schiffswrack im flachen Wasser zum Schnorcheln.']],tip:'Früh starten oder eine private Bangka nehmen. Ab 10 Uhr ist am Kayangan-Aussichtspunkt Schlange angesagt.'},
+ {d:'2027-01-29',s:'coron',t:'Wracks oder Strände',stay:'Coron Town',i:[['Für Taucher','Zwei bis drei Tauchgänge an japanischen Weltkriegswracks, viele liegen auf 10–40 m.'],['Für Schnorchler','Island-Escapade-Tour: Malcapuya, Banana Island, Bulog Dos mit weißem Sand.'],['Abends','Abendessen in Coron Town, Calamansi-Saft dazu.']]},
+ {d:'2027-01-30',s:'coron',t:'Mt. Tapyas und Puffertag',stay:'Coron Town',i:[['Optional','Ganztagsausflug Calauit Safari im Norden von Busuanga: Giraffen und Zebras auf einer Insel.'],['Alternativ','Puffertag, falls eine Tour wegen Wind ausgefallen ist.'],['Sonnenuntergang','Gut 700 Stufen auf den Mt. Tapyas, oben Blick über die ganze Bucht.']]},
+ {d:'2027-01-31',s:'elnido',t:'Fähre nach El Nido',stay:'El Nido',i:[['Morgens','Schnellfähre Coron → El Nido, ca. 4–5 Stunden.'],['Nachmittag','Ankommen, Tricycle zur Unterkunft, Umweltgebühr zahlen.'],['Abends','Sonnenuntergang am Las Cabanas Beach.']],tip:'Auf der Fähre hinten und unten sitzen, dort schaukelt es am wenigsten.'},
+ {d:'2027-02-01',s:'elnido',t:'Tour A: Lagunen im Kajak',stay:'El Nido',i:[['Tagsüber','Big Lagoon, Small Lagoon, Secret Lagoon, Shimizu Island und 7 Commando Beach.'],['Unterwegs','In der Small Lagoon mit dem Kajak durch einen Felsspalt paddeln.'],['Abends','Streetfood und Bars in El Nido Town.']],tip:'Die Plätze für die Big Lagoon sind pro Tag begrenzt. Beim Buchen der Tour fragen, ob sie eingeschlossen ist.'},
+ {d:'2027-02-02',s:'elnido',t:'Nacpan Beach',stay:'El Nido',i:[['Vormittag','Mit Scooter oder Tricycle ca. 45 Minuten nach Nacpan: 4 km goldener Sand.'],['Mittag','Kokosnuss und Grillfisch an einer Strandbude.'],['Optional','Weiter zum Duli Beach, Surfer-Bucht ohne Massen.']]},
+ {d:'2027-02-03',s:'elnido',t:'Tour C oder private Bangka',stay:'El Nido',i:[['Tagsüber','Hidden Beach, Secret Beach, Matinloc Shrine und Helicopter Island.'],['Alternativ','Private Bangka mit eigener Route, zu zweit überraschend bezahlbar.'],['Abends','Zum Abendessen nach Corong-Corong mit Blick auf den Sonnenuntergang.']]},
+ {d:'2027-02-04',s:'elnido',t:'Puffer und Abschied',stay:'El Nido',i:[['Optional','Nachholtag für eine ausgefallene Tour.'],['Alternativ','Kajak mieten, Massage, Kochkurs.'],['Abends','Abschiedsessen am Strand, letzte Halo-halo.']]},
+ {d:'2027-02-05',s:'pps',t:'Van nach Puerto Princesa',stay:'Puerto Princesa, nahe Flughafen',i:[['Vormittag','Shared Van El Nido → Puerto Princesa, ca. 5–6 Stunden.'],['Nachmittag','Einchecken, kurz durchatmen.'],['Abends','Baywalk und Abendessen. Bekannt für frische Meeresfrüchte.']],tip:'Wer die Fähre verpasst hat, kann diesen Tag streichen und direkt von El Nido nach Manila fliegen.'},
+ {d:'2027-02-06',s:'manila',t:'Rückreise über Manila',stay:'Im Flugzeug',i:[['Früh','Flug PPS → MNL.'],['Mittag','Terminalwechsel in Manila, einchecken, Rest-Peso ausgeben.'],['Abends','Langstreckenflug nach Hause. Heute ist chinesisches Neujahr, Flughäfen sind voll.']]},
+ {d:'2027-02-07',s:'home',t:'Ankunft in Deutschland',stay:'Zu Hause',i:[['Sonntag','Landung, Jetlag mit Tageslicht bekämpfen, früh ins Bett.']],tip:'Mabuhay! Willkommen zurück.'}
+];
+var dayState=load('days',{});
+function renderPlan(){
+  var td=todayStr(),html='',last='';
+  DAYS.forEach(function(x,i){
+    if(x.s!==last){
+      var grp=DAYS.filter(function(y,j){return y.s===x.s&&j>=i});var n=0;for(var j=i;j<DAYS.length&&DAYS[j].s===x.s;j++)n++;
+      html+='<div class="chapter"><i></i><h3>'+esc(CH[x.s])+'</h3><span>'+fmt(x.d)+(n>1?' – '+fmt(DAYS[i+n-1].d):'')+'</span></div>';last=x.s;
+    }
+    var st=dayState[x.d]||{};
+    html+='<article class="card day'+(st.ok?' done':'')+(x.d===td?' today':'')+'" id="d-'+x.d+'">'+
+      '<div class="day-head"><span class="day-date">Tag '+(i+1)+' · <b>'+fmt(x.d)+'</b></span><h4>'+esc(x.t)+'</h4><span class="day-stay">🛏 '+esc(x.stay)+'</span></div>'+
+      '<ul>'+x.i.map(function(r){return '<li><b>'+esc(r[0])+'</b><span>'+esc(r[1])+'</span></li>'}).join('')+'</ul>'+
+      (x.tip?'<p class="tip">'+esc(x.tip)+'</p>':'')+
+      '<div class="day-foot"><textarea id="n-'+x.d+'" data-d="'+x.d+'" rows="1" placeholder="Eure Notizen …" aria-label="Notizen für '+fmt(x.d)+'">'+esc(st.n||'')+'</textarea>'+
+      '<label><input type="checkbox" data-d="'+x.d+'"'+(st.ok?' checked':'')+'> erlebt</label></div></article>';
+  });
+  $('planList').innerHTML=html;
+  var inTrip=td>=START&&td<=END;
+  $('todayBtn').hidden=!inTrip;
+  var done=DAYS.filter(function(x){return(dayState[x.d]||{}).ok}).length;
+  $('planHint').textContent=done?done+' von 21 Tagen erlebt':'';
+}
+renderPlan();
+$('planList').addEventListener('input',function(e){
+  if(e.target.tagName!=='TEXTAREA')return;var d=e.target.dataset.d;dayState[d]=dayState[d]||{};dayState[d].n=e.target.value;save('days',dayState);
+});
+$('planList').addEventListener('change',function(e){
+  if(e.target.type!=='checkbox')return;var d=e.target.dataset.d;dayState[d]=dayState[d]||{};dayState[d].ok=e.target.checked;save('days',dayState);
+  e.target.closest('.day').classList.toggle('done',e.target.checked);
+  var done=DAYS.filter(function(x){return(dayState[x.d]||{}).ok}).length;$('planHint').textContent=done?done+' von 21 Tagen erlebt':'';
+});
+$('todayBtn').addEventListener('click',function(){var el=$('d-'+todayStr());if(el)el.scrollIntoView({behavior:'smooth'})});
+var resetArm=false;
+$('planReset').addEventListener('click',function(){
+  if(!resetArm){resetArm=true;this.textContent='Wirklich zurücksetzen? Nochmal tippen';var b=this;setTimeout(function(){resetArm=false;b.innerHTML='Notizen &amp; Haken zurücksetzen'},4000);return}
+  dayState={};save('days',dayState);renderPlan();resetArm=false;this.innerHTML='Notizen &amp; Haken zurücksetzen';toast('Reiseplan zurückgesetzt');
+});
+
+/* ---------- phase line ---------- */
+(function(){
+  var td=todayStr(),el=$('phase');
+  if(td<START){var n=daysBetween(td,START);el.textContent=n>60?'Noch '+n+' Tage. Jetzt ist die beste Zeit, Flüge und Unterkünfte zu buchen.':n>7?'Noch '+n+' Tage. Zeit für Impfungen, eSIM und Fährtickets.':'Noch '+n+' Tage. Packliste raus!';}
+  else if(td<=END){var i=daysBetween(START,td);var x=DAYS[i];el.textContent='Tag '+(i+1)+' von 21 · heute: '+x.t+' ('+CH[x.s]+')';}
+  else el.textContent='Salamat, Pilipinas! Die Reise ist vorbei, die Notizen bleiben.';
+})();
+
+/* ---------- map ---------- */
+var LAND=[
+ [[120.6,18.55],[121.2,18.62],[122.2,18.52],[122.3,17.3],[122.15,16.9],[122.45,16.2],[121.6,15.85],[121.55,15.0],[121.9,14.25],[122.6,14.3],[122.95,13.85],[123.35,13.75],[123.75,13.95],[124.15,13.05],[124.05,12.6],[123.85,12.75],[123.3,13.05],[122.65,13.2],[122.15,13.55],[121.6,13.85],[121.0,13.8],[120.65,14.25],[120.95,14.6],[120.55,14.75],[120.1,14.8],[119.8,15.6],[119.8,16.3],[120.3,16.6],[120.4,17.55],[120.6,18.55]],
+ [[120.35,13.5],[121.2,13.45],[121.5,12.85],[121.25,12.2],[120.8,12.35],[120.45,12.9]],
+ [[119.35,11.45],[119.7,11.25],[119.6,10.6],[119.15,10.05],[118.8,9.85],[118.05,8.95],[117.35,8.35],[117.15,8.45],[117.9,9.3],[118.45,9.95],[118.85,10.45],[119.2,10.95]],
+ [[119.85,12.25],[120.15,12.2],[120.35,12.0],[120.25,11.75],[119.95,11.85],[119.82,12.0]],
+ [[121.95,11.95],[122.65,11.55],[123.1,11.2],[122.95,10.75],[122.4,10.5],[121.95,10.75]],
+ [[122.95,10.95],[123.45,10.85],[123.35,10.2],[123.2,9.4],[123.05,9.05],[122.75,9.35],[122.4,9.9],[122.55,10.55]],
+ [[123.95,11.25],[124.1,10.9],[123.95,10.2],[123.55,9.45],[123.4,9.65],[123.7,10.35],[123.85,10.9]],
+ [[123.8,10.1],[124.5,10.12],[124.6,9.65],[124.1,9.6],[123.8,9.7]],
+ [[124.3,12.55],[125.2,12.45],[125.7,11.2],[125.05,10.95],[124.6,11.35],[124.3,12.0]],
+ [[124.3,11.5],[125.0,11.3],[125.3,10.3],[125.1,9.95],[124.8,10.1],[124.4,10.85]],
+ [[123.2,12.45],[123.75,12.3],[123.6,11.9],[123.2,12.1]],
+ [[122.05,7.0],[122.2,7.8],[123.0,8.05],[123.65,8.6],[124.3,8.35],[124.8,9.0],[125.4,9.75],[125.6,9.2],[126.25,9.05],[126.6,7.3],[126.2,6.3],[125.4,5.6],[125.2,6.1],[124.2,6.2],[124.0,7.3],[123.05,7.55],[122.25,6.9]],
+ [[125.95,10.02],[126.15,9.96],[126.2,9.72],[126.04,9.74],[125.93,9.88]]
+];
+function P(lon,lat){return[(lon-116.6)*60,(19.3-lat)*60]}
+function pathFrom(pts){return 'M'+pts.map(function(p){var q=P(p[0],p[1]);return q[0].toFixed(1)+' '+q[1].toFixed(1)}).join(' L')+' Z'}
+var STOPS=[
+ {id:'manila',n:'Manila',sub:'Ankunft & Abflug',lon:120.98,lat:14.55,dx:-14,dy:-6,anchor:'end',from:'2027-01-19',to:'2027-01-20',nights:1,climate:'31° / 22°',
+  p:'Nur zum Umsteigen: Ankommen, eine Nacht nahe dem Flughafen schlafen, weiter. Wer Lust auf Stadt hat, könnte am Ende einen Tag Intramuros (die spanische Altstadt) dranhängen.',
+  h:['Hotel in Pasay oder Parañaque, 10–20 Minuten zum Terminal','Grab-App für Fahrten statt Taxi','SIM-Karte und Bargeld gleich am Flughafen']},
+ {id:'siargao',n:'Siargao',sub:'Surf & Palmen',lon:126.12,lat:9.82,dx:-14,dy:-14,anchor:'end',from:'2027-01-20',to:'2027-01-27',nights:7,climate:'29° / 24°',
+  p:'Tränenförmige Insel mit endlosem Palmenwald, Surfkultur und entspannten Cafés. Alles dreht sich um General Luna und den Cloud-9-Boardwalk. Mit dem Scooter erreicht ihr Rock Pools, Lagunen und Fischerdörfer.',
+  h:['Cloud 9 Boardwalk zum Sonnenuntergang','Naked, Daku und Guyam Island','Sugba Lagoon und Magpupungko Rock Pools','Surfstunde für Anfänger']},
+ {id:'cebu',n:'Cebu',sub:'Umstieg',lon:123.98,lat:10.31,dx:14,dy:4,anchor:'start',minor:true},
+ {id:'coron',n:'Coron',sub:'Lagunen & Wracks',lon:120.2,lat:12.0,dx:14,dy:-6,anchor:'start',from:'2027-01-27',to:'2027-01-31',nights:4,climate:'31° / 24°',
+  p:'Schroffe Kalkfelsen über türkisen Seen, dazu ein Dutzend japanische Schiffswracks aus dem Zweiten Weltkrieg. Coron Town ist einfach und quirlig, das Wasser drumherum gehört zum Schönsten im Land.',
+  h:['Kayangan Lake und Twin Lagoon','Barracuda Lake: warme und kühle Schichten im Wasser','Wracktauchen oder Skeleton Wreck schnorcheln','Mt. Tapyas und Maquinit Hot Springs']},
+ {id:'elnido',n:'El Nido',sub:'Kalkfelsen & Bangkas',lon:119.4,lat:11.18,dx:-14,dy:6,anchor:'end',from:'2027-01-31',to:'2027-02-05',nights:5,climate:'31° / 24°',
+  p:'Das Postkarten-Palawan: senkrechte Karstwände, versteckte Lagunen im Bacuit-Archipel und lange Strände. Die Touren A bis D zeigen jeweils andere Ecken, Nacpan Beach ist der schönste Strand an Land.',
+  h:['Tour A mit Big und Small Lagoon','Nacpan und Duli Beach','Tour C: Hidden Beach, Matinloc Shrine','Las Cabanas zum Sonnenuntergang']},
+ {id:'pps',n:'Puerto Princesa',sub:'letzte Nacht',lon:118.74,lat:9.74,dx:14,dy:6,anchor:'start',from:'2027-02-05',to:'2027-02-06',nights:1,climate:'31° / 23°',
+  p:'Hauptstadt von Palawan und euer Absprung nach Manila. Für den berühmten Unterirdischen Fluss reicht die Zeit nicht. Wer ihn sehen will, hängt eine Nacht an und spart sie in El Nido.',
+  h:['Baywalk am Abend','Meeresfrüchte und Chao Long (vietnamesisch-palawanische Nudelsuppe)','Flughafen 10 Minuten vom Zentrum']}
+];
+function S(id){return STOPS.filter(function(s){return s.id===id})[0]}
+function arc(a,b,bend){var p=P(a.lon,a.lat),q=P(b.lon,b.lat);var mx=(p[0]+q[0])/2,my=(p[1]+q[1])/2;var dx=q[0]-p[0],dy=q[1]-p[1];var cx=mx-dy*bend,cy=my+dx*bend;return 'M'+p[0].toFixed(1)+' '+p[1].toFixed(1)+' Q'+cx.toFixed(1)+' '+cy.toFixed(1)+' '+q[0].toFixed(1)+' '+q[1].toFixed(1)}
+var ROUTE=[
+ {c:'r-fly',d:arc(S('manila'),S('siargao'),-.18)},
+ {c:'r-fly',d:arc(S('siargao'),S('cebu'),-.2)},
+ {c:'r-fly',d:arc(S('cebu'),S('coron'),-.15)},
+ {c:'r-boat',d:arc(S('coron'),S('elnido'),.12)},
+ {c:'r-van',d:(function(){var a=P(119.4,11.18),m=P(119.05,10.35),b=P(118.74,9.74);return 'M'+a.join(' ')+' Q'+m[0]+' '+m[1]+' '+b.join(' ')})()},
+ {c:'r-fly',d:arc(S('pps'),S('manila'),.22)}
+];
+(function buildMap(){
+  var svg='<rect class="sea" x="0" y="0" width="640" height="840"/>';
+  svg+=LAND.map(function(l){return '<path class="land" d="'+pathFrom(l)+'"/>'}).join('');
+  svg+='<text class="ctx" x="62" y="480">Südchinesisches Meer</text><text class="ctx" x="470" y="230">Philippinensee</text><text class="ctx" x="300" y="200">Luzon</text><text class="ctx" x="420" y="760">Mindanao</text><text class="ctx" x="40" y="640">Palawan</text><text class="ctx" x="360" y="460">Visayas</text>';
+  svg+=ROUTE.map(function(r,i){return '<path class="'+r.c+'" id="seg'+i+'" d="'+r.d+'"/>'}).join('');
+  svg+=STOPS.map(function(s){var p=P(s.lon,s.lat);return '<g class="stop'+(s.minor?' minor':'')+'" data-id="'+s.id+'" tabindex="'+(s.minor?-1:0)+'" role="button" aria-label="'+s.n+'"><circle class="o" cx="'+p[0].toFixed(1)+'" cy="'+p[1].toFixed(1)+'" r="'+(s.minor?6:10)+'"/><circle class="i" cx="'+p[0].toFixed(1)+'" cy="'+p[1].toFixed(1)+'" r="'+(s.minor?2.5:4)+'"/><text x="'+(p[0]+s.dx).toFixed(1)+'" y="'+(p[1]+s.dy).toFixed(1)+'" text-anchor="'+s.anchor+'">'+s.n+'</text><text class="sub" x="'+(p[0]+s.dx).toFixed(1)+'" y="'+(p[1]+s.dy+16).toFixed(1)+'" text-anchor="'+s.anchor+'">'+s.sub+'</text></g>'}).join('');
+  svg+='<circle id="mover" r="7" cx="-20" cy="-20"/>';
+  $('pmap').innerHTML=svg;
+})();
+var MAIN=STOPS.filter(function(s){return !s.minor});
+function currentStop(){var td=todayStr();for(var i=0;i<MAIN.length;i++){var s=MAIN[i];if(td>=s.from&&td<s.to)return s.id}return null}
+var nowStop=currentStop();
+if(nowStop){var g=document.querySelector('.stop[data-id="'+nowStop+'"]');if(g)g.classList.add('now')}
+$('stopTabs').innerHTML=MAIN.map(function(s){return '<button type="button" data-id="'+s.id+'">'+s.n+'</button>'}).join('');
+function showStop(id){
+  var s=S(id);if(!s||s.minor)return;
+  document.querySelectorAll('.pmap .stop').forEach(function(g){g.classList.toggle('sel',g.dataset.id===id)});
+  document.querySelectorAll('#stopTabs button').forEach(function(b){b.classList.toggle('on',b.dataset.id===id)});
+  $('stopPanel').innerHTML='<h3>'+s.n+'</h3><p class="when">'+fmt(s.from)+' – '+fmt(s.to)+' · '+s.nights+(s.nights===1?' Nacht':' Nächte')+'</p>'+
+   '<div class="facts-row"><div><small>Nächte</small><b>'+s.nights+'</b></div><div><small>Tag / Nacht</small><b>'+s.climate+'</b></div><div><small>Reisetag</small><b>'+(daysBetween(START,s.from)+1)+'</b></div></div>'+
+   '<p>'+s.p+'</p><ul>'+s.h.map(function(h){return '<li>'+h+'</li>'}).join('')+'</ul>'+
+   '<p><a class="btn btn-sm" href="#d-'+s.from+'">Zum Reisetag →</a></p>';
+}
+showStop(nowStop||'siargao');
+$('pmap').addEventListener('click',function(e){var g=e.target.closest('.stop');if(g)showStop(g.dataset.id)});
+$('pmap').addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){var g=e.target.closest('.stop');if(g){e.preventDefault();showStop(g.dataset.id)}}});
+$('stopTabs').addEventListener('click',function(e){var b=e.target.closest('button');if(b)showStop(b.dataset.id)});
+var playing=false;
+$('mapPlay').addEventListener('click',function(){
+  if(playing)return;playing=true;var segs=ROUTE.map(function(r,i){return $('seg'+i)});var lens=segs.map(function(s){return s.getTotalLength()});var tot=lens.reduce(function(a,b){return a+b},0);
+  var mover=$('mover'),t0=null,dur=7000,stopsAt=['siargao','cebu','coron','elnido','pps','manila'];
+  function step(ts){if(!t0)t0=ts;var f=Math.min(1,(ts-t0)/dur),dist=f*tot,i=0;while(i<lens.length-1&&dist>lens[i]){dist-=lens[i];i++}
+    var pt=segs[i].getPointAtLength(Math.min(dist,lens[i]));mover.setAttribute('cx',pt.x);mover.setAttribute('cy',pt.y);
+    var reached=stopsAt[i-1];if(reached&&reached!=='cebu')showStop(reached);
+    if(f<1)requestAnimationFrame(step);else{playing=false;showStop('elnido');setTimeout(function(){mover.setAttribute('cx',-20)},1200)}}
+  requestAnimationFrame(step);
+});
+
+/* ---------- stays ---------- */
+var STAYS=[
+ {id:'manila',n:'Manila',nights:'1 Nacht · 19.–20.01.',p:'Nur schlafen und weiter. Wichtig ist die Nähe zum Terminal eures Inlandsflugs am nächsten Morgen.',a:[['Pasay / Newport City','Direkt gegenüber Terminal 3, mehrere große Hotels, Shuttle oft inklusive. 60–120 €'],['Parañaque','Etwas günstiger, 10–20 Minuten zu allen Terminals. 40–80 €']]},
+ {id:'siargao',n:'Siargao',nights:'7 Nächte · 20.–27.01.',p:'Am meisten Auswahl und am schnellsten ausgebucht. Achtet auf Klimaanlage, Generator (Stromausfälle!) und Scooter-Verleih im Haus.',a:[['General Luna, Tourism Road','Mittendrin: Cafés, Restaurants, Nachtleben. Kann abends laut sein. 35–150 €'],['Cloud 9 / Catangnan','Am Surfspot, ruhiger, schöne Bungalows im Palmengarten. 50–200 €'],['Malinao / Pacifico','Weit weg vom Trubel, ideal für Ruhe, aber jede Fahrt dauert. 40–120 €']]},
+ {id:'coron',n:'Coron',nights:'4 Nächte · 27.–31.01.',p:'Die Touren starten im Hafen von Coron Town, deshalb wohnt man am besten dort. Die Insel-Resorts sind traumhaft, aber teuer und abgeschieden.',a:[['Coron Town','Praktisch: Hafen, Restaurants, Tourbüros zu Fuß. 30–100 €'],['Am Hang mit Meerblick','Ruhiger, oft mit Pool, Tricycle in die Stadt nötig. 60–150 €'],['Insel-Resort','Eigene Insel, Boottransfer, Vollpension. Ab 250 €']]},
+ {id:'elnido',n:'El Nido',nights:'5 Nächte · 31.01.–05.02.',p:'El Nido Town ist eng und lebendig, ein paar Minuten weiter wird es deutlich ruhiger. Die Touren holen euch meist am Strand der Stadt ab.',a:[['El Nido Town','Zu Fuß zu allen Touren und Bars, Blick auf die Felsen, nachts laut. 35–120 €'],['Corong-Corong','10 Minuten per Tricycle, Sonnenuntergang über dem Meer, entspannter. 50–180 €'],['Nacpan / Lio Beach','Strandträume, aber 20–45 Minuten weg. Gut für die letzten Tage. 80–250 €']]},
+ {id:'pps',n:'Puerto Princesa',nights:'1 Nacht · 05.–06.02.',p:'Kurz vor dem frühen Flug: In Flughafennähe, mit Abendessen-Möglichkeiten in der Nähe.',a:[['Stadtzentrum / Rizal Avenue','5–10 Minuten zum Flughafen, viele Restaurants. 30–80 €']]}
+];
+var stayState=load('stays',{});
+$('stayGrid').innerHTML=STAYS.map(function(s){var st=stayState[s.id]||{};
+  return '<article class="card stay" data-id="'+s.id+'"><div class="stay-top"><h4>'+s.n+'</h4><span class="n">'+s.nights+'</span></div><p>'+s.p+'</p><dl>'+s.a.map(function(a){return '<dt>'+a[0]+'</dt><dd>'+a[1]+'</dd>'}).join('')+'</dl>'+
+  '<div class="stay-form"><span class="lbl">Eure Unterkunft</span><input type="text" id="st-'+s.id+'-n" data-k="n" placeholder="Name des Hotels" value="'+esc(st.n||'')+'" aria-label="Unterkunft '+s.n+'"><input type="text" id="st-'+s.id+'-c" data-k="c" placeholder="Bestätigungsnummer / Link" value="'+esc(st.c||'')+'" aria-label="Bestätigung '+s.n+'"></div></article>';
+}).join('');
+$('stayGrid').addEventListener('input',function(e){var c=e.target.closest('.stay');if(!c||!e.target.dataset.k)return;var id=c.dataset.id;stayState[id]=stayState[id]||{};stayState[id][e.target.dataset.k]=e.target.value;save('stays',stayState)});
+
+/* ---------- checklists + timeline ---------- */
+var LISTS=[
+ {id:'now',t:'Jetzt (Okt. – Nov.)'},
+ {id:'dec',t:'Dezember'},
+ {id:'week',t:'Letzte Woche'},
+ {id:'pack',t:'Packliste'}
+];
+var TASKS=[
+ {id:'pass',l:'now',t:'Reisepass prüfen',s:'Muss bei Einreise noch mind. 6 Monate gültig sein, also bis mind. Ende Juli 2027.',due:'2026-10-25'},
+ {id:'long',l:'now',t:'Langstreckenflug buchen',s:'Abflughäfen vergleichen, Gepäck inklusive?',due:'2026-10-31'},
+ {id:'dom',l:'now',t:'Inlandsflüge buchen',s:'MNL→IAO (20.01.), IAO→USU (27.01.), PPS→MNL (06.02.), Aufgabegepäck dazubuchen',due:'2026-11-08'},
+ {id:'h-sia',l:'now',t:'Unterkunft Siargao buchen',s:'7 Nächte, 20.–27.01.',due:'2026-11-15'},
+ {id:'h-eln',l:'now',t:'Unterkunft El Nido buchen',s:'5 Nächte, 31.01.–05.02.',due:'2026-11-15'},
+ {id:'h-cor',l:'now',t:'Unterkunft Coron buchen',s:'4 Nächte, 27.–31.01.',due:'2026-11-22'},
+ {id:'h-mp',l:'now',t:'Hotels Manila & Puerto Princesa buchen',s:'je 1 Nacht, gut stornierbar',due:'2026-11-29'},
+ {id:'vacc',l:'dec',t:'Reisemedizinische Beratung',s:'Impfungen 6–8 Wochen vorher: Hepatitis A, Tetanus/Diphtherie, ggf. Typhus, Tollwut',due:'2026-11-30'},
+ {id:'ins',l:'dec',t:'Auslandskrankenversicherung prüfen',s:'inkl. Rücktransport; ggf. Tauch-Zusatz',due:'2026-12-06'},
+ {id:'card',l:'dec',t:'Kreditkarte ohne Auslandsgebühr',s:'Zwei Karten von verschiedenen Banken mitnehmen',due:'2026-12-13'},
+ {id:'ferry',l:'dec',t:'Fähre Coron → El Nido buchen',s:'31.01., morgens',due:'2026-12-20'},
+ {id:'dive',l:'dec',t:'Tauchschule Coron anfragen',s:'nur falls ihr tauchen wollt, Brevet mitnehmen',due:'2027-01-06'},
+ {id:'van',l:'dec',t:'Van El Nido → Puerto Princesa reservieren',s:'05.02.',due:'2027-01-10'},
+ {id:'esim',l:'week',t:'eSIM kaufen',s:'Globe oder Smart, 20+ GB',due:'2027-01-12'},
+ {id:'maps',l:'week',t:'Offline-Karten laden',s:'Google Maps / Maps.me für alle drei Inseln',due:'2027-01-15'},
+ {id:'etravel',l:'week',t:'eTravel-Registrierung',s:'etravel.gov.ph, kostenlos, frühestens 72 h vor Ankunft',due:'2027-01-16'},
+ {id:'checkin',l:'week',t:'Online-Check-in Langstrecke',s:'Sitzplätze nebeneinander sichern',due:'2027-01-16'},
+ {id:'docs',l:'week',t:'Unterlagen offline speichern',s:'Pass-Kopie, Tickets, Versicherung, Hotelbestätigungen',due:'2027-01-17'},
+ {id:'p1',l:'pack',t:'Riffschonende Sonnencreme',s:'auf den Inseln teuer, in El Nido Pflicht-Thema'},
+ {id:'p2',l:'pack',t:'Rashguard / UV-Shirt'},
+ {id:'p3',l:'pack',t:'Schnorchelmaske (eigene passt besser)'},
+ {id:'p4',l:'pack',t:'Wasserschuhe',s:'für Riffe und Rock Pools'},
+ {id:'p5',l:'pack',t:'Dry Bag 10–20 l',s:'für Bootstouren'},
+ {id:'p6',l:'pack',t:'Mückenschutz mit DEET oder Icaridin'},
+ {id:'p7',l:'pack',t:'Reisetabletten gegen Seekrankheit'},
+ {id:'p8',l:'pack',t:'Reiseapotheke',s:'Durchfall, Elektrolyte, Pflaster, Desinfektion'},
+ {id:'p9',l:'pack',t:'Steckdosen-Adapter Typ A'},
+ {id:'p10',l:'pack',t:'Powerbank'},
+ {id:'p11',l:'pack',t:'Leichte Regenjacke',s:'für Siargao'},
+ {id:'p12',l:'pack',t:'Trinkflasche zum Auffüllen'},
+ {id:'p13',l:'pack',t:'Euro in bar als Reserve'},
+ {id:'p14',l:'pack',t:'Weicher Rucksack statt Hartschalenkoffer',s:'Bangkas und Vans haben wenig Platz'}
+];
+var ck=load('ck',{});
+var custom=load('custom',{});
+function isLate(t){return t.due&&t.due<todayStr()&&!ck[t.id]}
+function renderChecks(){
+  $('checkGrid').innerHTML=LISTS.map(function(L){
+    var items=TASKS.filter(function(t){return t.l===L.id}).concat((custom[L.id]||[]).map(function(c){return{id:c.id,t:c.t,cust:true}}));
+    var done=items.filter(function(t){return ck[t.id]}).length;
+    return '<div class="card clist" data-l="'+L.id+'"><div class="clist-head"><h3>'+L.t+'</h3><span class="prog num">'+done+'/'+items.length+'</span></div><div class="bar"><i style="width:'+(items.length?done/items.length*100:0)+'%"></i></div>'+
+     items.map(function(t){return '<label class="citem'+(ck[t.id]?' ck':'')+'"><input type="checkbox" data-id="'+t.id+'"'+(ck[t.id]?' checked':'')+'><span>'+esc(t.t)+(t.s?'<small>'+esc(t.s)+'</small>':'')+'</span>'+(t.due?'<span class="due">'+(isLate(t)?'überfällig · ':'bis ')+fmt(t.due).split(', ')[1]+'</span>':'')+(t.cust?'<button type="button" class="x" data-del="'+t.id+'" aria-label="Eintrag löschen">×</button>':'')+'</label>'}).join('')+
+     '<form class="add-row" data-l="'+L.id+'"><input type="text" id="add-'+L.id+'" placeholder="Eigenen Punkt ergänzen" aria-label="Eigenen Punkt zu '+L.t+' ergänzen"><button type="submit">+</button></form></div>';
+  }).join('');
+}
+function renderTimeline(){
+  var items=TASKS.filter(function(t){return t.due}).sort(function(a,b){return a.due<b.due?-1:a.due>b.due?1:0});
+  var html='',m='',td=todayStr();
+  items.forEach(function(t){
+    var dd=D(t.due),mk=MON[dd.getMonth()]+' '+dd.getFullYear();
+    if(mk!==m){html+='<div class="tl-month">'+mk+'</div>';m=mk}
+    var n=daysBetween(td,t.due),late=isLate(t);
+    var pill=ck[t.id]?'<span class="pill p-done">Erledigt</span>':late?'<span class="pill p-open">Überfällig</span>':n<=14?'<span class="pill p-soon">in '+n+' Tagen</span>':'<span class="pill p-info">in '+n+' Tagen</span>';
+    html+='<label class="tl-row'+(ck[t.id]?' ck':'')+(late?' late':'')+'"><span class="tl-date">'+fmt(t.due)+'<small>'+dd.getFullYear()+'</small></span><span class="t">'+esc(t.t)+(t.s?'<small>'+esc(t.s)+'</small>':'')+'</span><span style="display:flex;gap:10px;align-items:center">'+pill+'<input type="checkbox" data-id="'+t.id+'"'+(ck[t.id]?' checked':'')+' aria-label="'+esc(t.t)+' erledigt"></span></label>';
+  });
+  $('timeline').innerHTML=html;
+}
+function renderAllChecks(){renderChecks();renderTimeline()}
+renderAllChecks();
+function onCk(e){if(e.target.type!=='checkbox'||!e.target.dataset.id)return;ck[e.target.dataset.id]=e.target.checked;save('ck',ck);renderAllChecks()}
+$('checkGrid').addEventListener('change',onCk);$('timeline').addEventListener('change',onCk);
+$('checkGrid').addEventListener('submit',function(e){e.preventDefault();var f=e.target,l=f.dataset.l,inp=f.querySelector('input'),v=inp.value.trim();if(!v)return;custom[l]=custom[l]||[];custom[l].push({id:'c'+Date.now(),t:v});save('custom',custom);renderChecks();toast('Hinzugefügt')});
+$('checkGrid').addEventListener('click',function(e){var id=e.target.dataset&&e.target.dataset.del;if(!id)return;e.preventDefault();Object.keys(custom).forEach(function(l){custom[l]=custom[l].filter(function(c){return c.id!==id})});delete ck[id];save('custom',custom);save('ck',ck);renderChecks()});
+
+/* ---------- budget ---------- */
+var PRESET=[
+ {bLong:750,bDom:200,bRoom:35,bFood:15,bTours:250,bLocal:90,bMisc:60},
+ {bLong:900,bDom:260,bRoom:80,bFood:30,bTours:400,bLocal:140,bMisc:90},
+ {bLong:1300,bDom:320,bRoom:180,bFood:55,bTours:750,bLocal:300,bMisc:140}
+];
+var FIELDS=['bLong','bDom','bRoom','bFood','bTours','bLocal','bMisc'];
+var bud=load('budget',null);
+function applyStyle(s){FIELDS.forEach(function(f){$(f).value=PRESET[s][f]});document.querySelectorAll('#styleSeg button').forEach(function(b){b.classList.toggle('on',+b.dataset.s===s)})}
+if(bud){$('bPers').value=bud.bPers||2;FIELDS.forEach(function(f){if(bud[f]!=null)$(f).value=bud[f]});document.querySelectorAll('#styleSeg button').forEach(function(b){b.classList.toggle('on',+b.dataset.s===bud.s)})}else applyStyle(1);
+function v(id){var x=parseFloat($(id).value);return isFinite(x)&&x>=0?x:0}
+function calc(){
+  var n=Math.max(1,Math.round(v('bPers'))),rooms=Math.ceil(n/2);
+  var rows=[['Langstrecke',v('bLong')*n],['Inlandsflüge',v('bDom')*n],['Unterkunft',v('bRoom')*18*rooms],['Essen & Trinken',v('bFood')*19*n],['Touren',v('bTours')*n],['Transport vor Ort',v('bLocal')*n],['Gebühren & Sonstiges',v('bMisc')*n]];
+  var tot=rows.reduce(function(a,r){return a+r[1]},0),max=Math.max.apply(null,rows.map(function(r){return r[1]}))||1;
+  $('bTotal').textContent=eur(tot);$('bPP').textContent=eur(tot/n);
+  $('bRows').innerHTML=rows.map(function(r){return '<div class="b-row"><span>'+r[0]+'</span><span class="track"><i style="width:'+(r[1]/max*100).toFixed(1)+'%"></i></span><span class="v">'+eur(r[1])+'</span></div>'}).join('')+(n>2?'<p class="note">Gerechnet mit '+rooms+' Doppelzimmern.</p>':'');
+  var st={bPers:n,s:(bud&&bud.s!=null)?bud.s:1};FIELDS.forEach(function(f){st[f]=v(f)});bud=st;save('budget',st);
+  var r=v('fxRate')||64;$('fxEur').textContent=(v('fxPhp')/r).toLocaleString('de-DE',{maximumFractionDigits:2,minimumFractionDigits:2})+' €';
+}
+document.querySelector('.b-in').addEventListener('input',calc);
+$('fxRate').addEventListener('input',calc);$('fxPhp').addEventListener('input',calc);
+$('styleSeg').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var s=+b.dataset.s;applyStyle(s);bud=bud||{};bud.s=s;calc();bud.s=s;save('budget',bud)});
+calc();
+
+/* ---------- language ---------- */
+var PH=[
+ ['Hallo, wie geht’s?','Kumusta?','koo-MOOS-ta','Kumusta?'],
+ ['Guten Morgen','Magandang umaga','ma-gan-DANG oo-MA-ga','Maayong buntag'],
+ ['Guten Abend','Magandang gabi','ma-gan-DANG ga-BI','Maayong gabii'],
+ ['Danke','Salamat (po)','sa-LA-mat','Salamat'],
+ ['Vielen Dank','Maraming salamat','ma-RA-ming sa-LA-mat','Daghang salamat'],
+ ['Gern geschehen','Walang anuman','wa-LANG a-noo-MAN','Walay sapayan'],
+ ['Ja / Nein','Oo / Hindi','O-o / hin-DI','Oo / Dili'],
+ ['Bitte (beim Bitten)','Pakiusap','pa-ki-OO-sap','Palihug'],
+ ['Wie viel kostet das?','Magkano po ito?','mag-KA-no po i-TO','Tagpila ni?'],
+ ['Zu teuer!','Ang mahal!','ang ma-HAL','Mahal kaayo!'],
+ ['Geht es billiger?','Pwede pong tawad?','PWE-de pong TA-wad','Pwede hangyo?'],
+ ['Lecker!','Masarap!','ma-sa-RAP','Lami!'],
+ ['Wunderschön!','Ang ganda!','ang gan-DA','Nindot!'],
+ ['Wo ist …?','Nasaan ang …?','na-sa-AN ang','Asa ang …?'],
+ ['Toilette','CR („comfort room“)','si-AR','CR'],
+ ['Wasser','Tubig','TOO-big','Tubig'],
+ ['Ohne Eis, bitte','Walang yelo po','wa-LANG YE-lo po','Walay yelo'],
+ ['Nicht scharf','Hindi maanghang','hin-DI ma-ang-HANG','Dili halang'],
+ ['Die Rechnung, bitte','Bill po','bil po','Bill palihug'],
+ ['Hier anhalten! (Tricycle)','Para po!','PA-ra po','Lugar lang!'],
+ ['Langsam, bitte','Dahan-dahan lang po','da-HAN da-HAN lang','Hinay-hinay lang'],
+ ['Ich verstehe nicht','Hindi ko maintindihan','hin-DI ko ma-in-tin-DI-han','Wala ko kasabot'],
+ ['Ich heiße …','Ako si …','a-KO si','Ako si …'],
+ ['Wie heißt du?','Anong pangalan mo?','a-NONG pa-NGA-lan mo','Unsay imong ngalan?'],
+ ['Gibt es WLAN?','May WiFi ba?','mai WAI-fai ba','Naa bay WiFi?'],
+ ['Freund / Freundin','Kaibigan','ka-i-BI-gan','Higala'],
+ ['Prost!','Tagay!','TA-gai','Tagay!'],
+ ['Pass auf dich auf!','Ingat!','I-ngat','Amping!'],
+ ['Tschüss','Paalam','pa-A-lam','Babay'],
+ ['Ich liebe die Philippinen!','Mahal ko ang Pilipinas!','ma-HAL ko ang pi-li-PI-nas','Ganahan ko sa Pilipinas!']
+];
+function renderLang(q){q=(q||'').toLowerCase();var r=PH.filter(function(p){return !q||p.join(' ').toLowerCase().indexOf(q)>-1});
+  $('langBody').innerHTML=r.length?r.map(function(p){return '<tr><td>'+esc(p[0])+'</td><td class="tg">'+esc(p[1])+'<small>'+esc(p[2])+'</small></td><td class="bs">'+esc(p[3])+'</td></tr>'}).join(''):'<tr><td colspan="3">Kein Treffer. Versucht ein anderes Wort.</td></tr>'}
+renderLang();$('langQ').addEventListener('input',function(){renderLang(this.value)});
+
+/* ---------- food + quest ---------- */
+var FOOD=[
+ ['Adobo','Nationalgericht: Huhn oder Schwein, geschmort in Essig, Sojasauce, Knoblauch und Lorbeer.','überall'],
+ ['Kinilaw','Roher Fisch in Essig und Calamansi mit Ingwer und Zwiebeln, die philippinische Ceviche.','Siargao, frisch am Hafen'],
+ ['Lechon','Spanferkel mit Kruste wie Glas. Auf Festen das Herzstück, sonst als Lechon Kawali (frittiert).','Märkte, Carinderias'],
+ ['Sinigang','Saure Tamarinden-Suppe mit Gemüse und Schwein oder Garnelen. Perfekt nach einem Bootstag.','überall'],
+ ['Sisig','Gehacktes Schwein, brutzelnd auf heißer Eisenplatte, mit Ei und Calamansi. Bester Bierbegleiter.','Bars, Grills'],
+ ['Halo-halo','Eis-Mischmasch mit Kondensmilch, Bohnen, Früchten, Ube und Leche Flan.','Cafés, Jollibee, Chowking'],
+ ['Chicken Inasal','Gegrilltes Huhn mit Annatto-Öl, dazu unbegrenzt Reis.','Mang Inasal, Grillstände'],
+ ['Pancit','Gebratene Nudeln, stehen für langes Leben und dürfen an keinem Geburtstag fehlen.','überall'],
+ ['Lumpia','Frühlingsrollen, frittiert (Shanghai) oder frisch mit Erdnusssauce.','Streetfood'],
+ ['Kare-Kare','Ochsenschwanz in Erdnusssauce, dazu Bagoong (fermentierte Garnelenpaste).','Restaurants'],
+ ['Ube','Lila Süßkartoffel: als Eis, Kuchen, Latte oder Halaya.','Bäckereien, Cafés'],
+ ['Turon','Banane und Jackfruit im Teigmantel, karamellisiert. Kostet fast nichts.','Straßenstände'],
+ ['Mango','Philippinische Mangos gelten als die süßesten der Welt. Als Shake, getrocknet oder pur.','Märkte, Shake-Stände'],
+ ['Calamansi-Saft','Kleine Zitrusfrucht, süß-sauer, eiskalt. Das Getränk zu jeder Mahlzeit.','überall'],
+ ['Chao Long','Palawans Version der vietnamesischen Pho, ein Erbe vietnamesischer Flüchtlinge.','Puerto Princesa'],
+ ['Balut','Gekochtes Entenei mit Embryo. Die Mutprobe – nur, wenn ihr wirklich wollt.','abends, Straßenverkäufer']
+];
+var QUEST=[
+ ['q1','Sonnenuntergang am Cloud-9-Boardwalk','Siargao'],['q2','Auf dem Surfbrett gestanden','Siargao'],['q3','Magpupungko bei Ebbe','Siargao'],['q4','Von der Palmenschaukel am Maasin River','Siargao'],
+ ['q5','Am Kayangan-Aussichtspunkt','Coron'],['q6','Die kühle Schicht im Barracuda Lake gespürt','Coron'],['q7','Ein Weltkriegswrack gesehen','Coron'],['q8','Mt. Tapyas hinaufgestiegen','Coron'],
+ ['q9','Im Kajak in die Small Lagoon','El Nido'],['q10','Barfuß über Nacpan Beach','El Nido'],['q11','Sonnenuntergang Las Cabanas','El Nido'],
+ ['q12','Tricycle-Preis selbst verhandelt','überall'],['q13','Einen Song bei der Videoke gesungen','überall'],['q14','Mit San Miguel auf den Sonnenuntergang angestoßen','überall']
+];
+var food=load('food',{}),quest=load('quest',{});
+function renderFood(){
+  $('foodGrid').innerHTML=FOOD.map(function(f,i){var c=food[i];return '<label class="card food'+(c?' ck':'')+'"><span class="food-top"><h4>'+f[0]+'</h4><input type="checkbox" data-i="'+i+'"'+(c?' checked':'')+' aria-label="'+f[0]+' probiert"></span><p>'+f[1]+'</p><span class="where">'+f[2]+'</span></label>'}).join('');
+  $('quest').innerHTML=QUEST.map(function(q){var c=quest[q[0]];return '<label class="card qi'+(c?' ck':'')+'"><input type="checkbox" data-q="'+q[0]+'"'+(c?' checked':'')+'><span>'+q[1]+'<small>'+q[2]+'</small></span></label>'}).join('');
+  var fd=Object.keys(food).filter(function(k){return food[k]}).length,qd=Object.keys(quest).filter(function(k){return quest[k]}).length;
+  $('questProg').textContent=qd+' / '+QUEST.length+' Momente · '+fd+' / '+FOOD.length+' Gerichte';
+}
+renderFood();
+$('foodGrid').addEventListener('change',function(e){food[e.target.dataset.i]=e.target.checked;save('food',food);renderFood()});
+$('quest').addEventListener('change',function(e){quest[e.target.dataset.q]=e.target.checked;save('quest',quest);renderFood()});
+
+/* ---------- guide ---------- */
+var WEATHER=[
+ ['Siargao','29°','Feuchteste Station: kurze, kräftige Schauer, dazwischen viel Sonne. Wasser 27°, Wellen kräftig.',[8,9,6,7,8,6,9]],
+ ['Coron','31°','Trockenzeit. Der Nordost-Wind (Amihan) macht das Meer manchmal kabbelig, Touren fallen dann aus.',[2,3,1,2,3,1,2]],
+ ['El Nido','31°','Die schönste Zeit des Jahres: trocken, klar, abends angenehm. Wind wie in Coron.',[2,2,1,3,2,1,2]]
+];
+$('weather').innerHTML=WEATHER.map(function(w){return '<div class="card w"><h4>'+w[0]+' im Januar</h4><div class="temp">'+w[1]+'</div><p>'+w[2]+'</p><div class="rain" aria-hidden="true">'+w[3].map(function(r){return '<i style="height:'+(r*10)+'%"></i>'}).join('')+'</div><p class="rain-l">Regenneigung, schematisch</p></div>'}).join('');
+var GUIDE=[
+ ['Etikette',[
+  '<b>Freundlich bleiben, auch wenn es dauert.</b> Laut werden lässt alle Beteiligten das Gesicht verlieren, und dann geht gar nichts mehr.',
+  '<b>„po“ und „opo“</b> zeigen Respekt. Ältere Menschen nennt man „Tita“ / „Tito“ (Tante / Onkel), ältere Geschwister „Ate“ / „Kuya“.',
+  '<b>Handeln</b> ist auf Märkten und bei Tricycles normal, in Läden und Restaurants nicht. Bleibt fair, es geht oft um 20 Peso.',
+  '<b>Trinkgeld:</b> Steht „Service Charge“ auf der Rechnung, ist es erledigt. Sonst 5–10 %. Bootscrew und Guides nach einer Tour 100–200 ₱ pro Person.',
+  '<b>Kirchen:</b> Schultern und Knie bedecken.',
+  '<b>Fotos von Menschen</b> nur mit Nachfrage. Fast alle sagen gern ja.'
+ ]],
+ ['Geld',[
+  '<b>Peso (₱):</b> Kleine Scheine sammeln, Tricycle-Fahrer und Strandbuden können oft nicht wechseln.',
+  '<b>Geldautomaten</b> verlangen meist um die 250 ₱ Gebühr pro Abhebung. Lieber seltener und dafür mehr abheben.',
+  '<b>Auf Siargao und in El Nido</b> sind Automaten manchmal leer oder offline. Reserve aus Manila mitbringen.',
+  '<b>Karte</b> geht in Hotels und besseren Restaurants. Touren, Umweltgebühren und kleine Läden nur bar.'
+ ]],
+ ['Unterwegs',[
+  '<b>eTravel:</b> Pflicht-Registrierung auf etravel.gov.ph, kostenlos, frühestens 72 Stunden vor Ankunft. Der QR-Code wird bei der Einreise gescannt.',
+  '<b>Einreise:</b> Deutsche brauchen bis 30 Tage kein Visum, aber ein Weiterflugticket.',
+  '<b>Grab</b> statt Taxi in Manila. Auf den Inseln fahrt ihr Tricycle oder Scooter. Für Scooter braucht ihr einen internationalen Führerschein.',
+  '<b>Inlandsflüge</b> sind oft verspätet. Nie zu knapp umsteigen, schon gar nicht auf den Langstreckenflug.',
+  '<b>Umweltgebühren</b> in El Nido, Coron und auf Siargao: einige hundert Peso, immer in bar.'
+ ]],
+ ['Gesundheit & Alltag',[
+  '<b>Leitungswasser</b> nicht trinken. Viele Unterkünfte haben Refill-Stationen.',
+  '<b>Sonne:</b> Die Tropensonne brennt auch bei Wolken. Mittags auf dem Boot ein UV-Shirt tragen.',
+  '<b>Mücken:</b> Dengue gibt es auch im Januar. Abends lange Kleidung und Repellent.',
+  '<b>Strom:</b> 220 V, Stecker Typ A (flache US-Stifte). Stromausfälle sind auf den Inseln normal.',
+  '<b>Internet:</b> In Städten gut, auf See weg. eSIM von Globe oder Smart nehmen, beide funktionieren auf allen drei Inseln.',
+  '<b>Zeitzone:</b> UTC+8, also 7 Stunden vor Deutschland.'
+ ]]
+];
+$('guideGrid').innerHTML=GUIDE.map(function(g){return '<div class="card g-card"><h3>'+g[0]+'</h3><ul>'+g[1].map(function(l){return '<li>'+l+'</li>'}).join('')+'</ul></div>'}).join('');
+
+/* ---------- emergency ---------- */
+var EM=[
+ ['hot','Notruf (Polizei, Feuer, Rettung)','911','landesweit, kostenlos'],
+ ['','Deutsche Botschaft Manila','+63 2 8702 3000','RCBC Plaza, Ayala Ave., Makati. Vor der Reise auf manila.diplo.de prüfen.'],
+ ['','Karten sperren (Deutschland)','+49 116 116','Sperr-Notruf für die meisten deutschen Bank- und Kreditkarten'],
+ ['','Touristen-Hotline','1-TOURISM','Department of Tourism, für Beschwerden und Hilfe: 1-868-7647-6'],
+ ['','Gute Klinik in Manila','St. Luke’s BGC','St. Luke’s Medical Center Global City, Taguig'],
+ ['','Gute Klinik auf Palawan','Puerto Princesa','In El Nido und Coron gibt es nur kleine Kliniken. Für Ernstes geht es nach Puerto Princesa.']
+];
+$('emGrid').innerHTML=EM.map(function(e){return '<div class="card em '+e[0]+'"><small>'+e[1]+'</small><b>'+e[2]+'</b><p>'+e[3]+'</p><button type="button" data-copy="'+esc(e[2])+'">Kopieren</button></div>'}).join('');
+$('emGrid').addEventListener('click',function(e){var t=e.target.dataset&&e.target.dataset.copy;if(!t)return;var b=e.target;
+  function sel(){var el=b.parentNode.querySelector('b');var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);toast('Markiert, jetzt kopieren')}
+  try{navigator.clipboard.writeText(t).then(function(){toast('Kopiert: '+t)},sel)}catch(err){sel()}});
+var ins=$('insNo');ins.value=load('ins','');ins.addEventListener('input',function(){save('ins',ins.value)});
+
+/* ---------- nav highlight ---------- */
+var links=[].slice.call(document.querySelectorAll('#navLinks a'));
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+en.target.id)})}})},{rootMargin:'-40% 0px -55% 0px'});
+document.querySelectorAll('main section').forEach(function(s){io.observe(s)})}
+
+/* ---------- hero glints ---------- */
+(function(){
+  var cv=$('glint'),cx=cv.getContext('2d'),W,H,pts=[],reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function size(){var r=cv.getBoundingClientRect();W=cv.width=r.width*devicePixelRatio;H=cv.height=r.height*devicePixelRatio;pts=[];for(var i=0;i<70;i++)pts.push({x:Math.random(),y:Math.random()*.45,p:Math.random()*6.28,s:.4+Math.random()*1.2})}
+  function draw(t){cx.clearRect(0,0,W,H);pts.forEach(function(p){var a=.25+.75*Math.abs(Math.sin(p.p+t/1400*p.s));cx.fillStyle='rgba(255,236,210,'+(a*.7).toFixed(2)+')';cx.beginPath();cx.arc(p.x*W,p.y*H,p.s*devicePixelRatio,0,6.283);cx.fill()});if(!reduce)requestAnimationFrame(draw)}
+  size();window.addEventListener('resize',size);requestAnimationFrame(draw);
+})();
+})();
+</script>
